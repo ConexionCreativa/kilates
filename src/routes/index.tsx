@@ -1,24 +1,53 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/site/Hero";
+import { CategoryStrip } from "@/components/site/CategoryStrip";
+import { Catalog } from "@/components/site/Catalog";
+import { Trust } from "@/components/site/Trust";
+import { Story } from "@/components/site/Story";
+import type { CategoryId } from "@/data/products";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Kilates | Joyería fina en oro y plata — Catálogo con precios" },
+      {
+        name: "description",
+        content:
+          "Anillos, cadenas, brazaletes, zarcillos, dijes y relojes en oro 18k, 14k y plata 925. Precios visibles, envío asegurado y pedidos por WhatsApp.",
+      },
+      { property: "og:title", content: "Kilates | Joyería fina en oro y plata" },
+      {
+        property: "og:description",
+        content:
+          "Catálogo de alta joyería en Venezuela con precios claros y atención directa por WhatsApp.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const [category, setCategory] = useState<CategoryId | "todos">("todos");
+  const [query, setQuery] = useState("");
+
+  function selectCategory(id: CategoryId) {
+    setCategory(id);
+    document.getElementById("catalogo")?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
+    <>
+      <Hero />
+      <CategoryStrip onSelect={selectCategory} />
+      <Catalog
+        category={category}
+        query={query}
+        onCategoryChange={setCategory}
+        onQueryChange={setQuery}
       />
-    </div>
+      <Trust />
+      <Story />
+    </>
   );
 }
