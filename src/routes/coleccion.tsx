@@ -3,12 +3,18 @@ import { Catalog } from "@/components/site/Catalog";
 import { Trust } from "@/components/site/Trust";
 import type { CategoryId } from "@/data/products";
 
-type ColeccionSearch = { q?: string; cat?: CategoryId | "todos" };
+type ColeccionSearch = {
+  q?: string | undefined;
+  cat?: CategoryId | "todos" | undefined;
+};
 
 export const Route = createFileRoute("/coleccion")({
   validateSearch: (search: Record<string, unknown>): ColeccionSearch => ({
-    q: typeof search.q === "string" && search.q ? search.q : undefined,
-    cat: typeof search.cat === "string" ? (search.cat as CategoryId) : undefined,
+    q: typeof search["q"] === "string" && search["q"] ? search["q"] : undefined,
+    cat:
+      typeof search["cat"] === "string"
+        ? (search["cat"] as CategoryId)
+        : undefined,
   }),
   head: () => ({
     meta: [
