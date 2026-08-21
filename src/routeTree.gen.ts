@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ColeccionRouteImport } from './routes/coleccion'
+import { Route as ContactoRouteImport } from './routes/contacto'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ColeccionRoute = ColeccionRouteImport.update({
+  id: '/coleccion',
+  path: '/coleccion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/coleccion': typeof ColeccionRoute
+  '/contacto': typeof ContactoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/coleccion': typeof ColeccionRoute
+  '/contacto': typeof ContactoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/coleccion': typeof ColeccionRoute
+  '/contacto': typeof ContactoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/coleccion' | '/contacto'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/coleccion' | '/contacto'
+  id: '__root__' | '/' | '/coleccion' | '/contacto'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ColeccionRoute: typeof ColeccionRoute
+  ContactoRoute: typeof ContactoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/coleccion': {
+      id: '/coleccion'
+      path: '/coleccion'
+      fullPath: '/coleccion'
+      preLoaderRoute: typeof ColeccionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ColeccionRoute: ColeccionRoute,
+  ContactoRoute: ContactoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
