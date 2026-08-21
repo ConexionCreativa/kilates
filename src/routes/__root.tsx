@@ -144,7 +144,7 @@ function RootComponent() {
         </div>
         <CartDrawer />
         <WhatsAppFab />
-        <Toaster position="bottom-left" />
+        <Toaster position="bottom-left" theme="dark" />
       </CartProvider>
     </QueryClientProvider>
   );
