@@ -34,7 +34,7 @@ export function formatVes(value: number) {
 }
 
 export function CurrencyProvider({ children }: { children: React.ReactNode }) {
-  const [currency, setCurrency] = useState<Currency>("USD");
+  const [currency, setCurrency] = useState<Currency>("VES");
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
