@@ -8,6 +8,7 @@ import {
   type Material,
   type Product,
 } from "@/data/products";
+import { useCurrency } from "@/lib/currency";
 import { ProductCard } from "./ProductCard";
 import { ProductDialog } from "./ProductDialog";
 
@@ -129,7 +130,7 @@ export function Catalog({
         </div>
 
         <p className="text-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
-          {filtered.length} piezas disponibles · precios en USD
+          {filtered.length} piezas disponibles · precios en {currency === "USD" ? "USD" : "bolívares"}
         </p>
       </div>
 

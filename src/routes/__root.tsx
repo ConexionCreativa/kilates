@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { CartProvider } from "@/lib/cart";
+import { CurrencyProvider } from "@/lib/currency";
 import { CartDrawer } from "@/components/site/CartDrawer";
 import { Header } from "@/components/site/Header";
 import { TopBar } from "@/components/site/TopBar";
@@ -132,6 +133,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <CurrencyProvider>
       <CartProvider>
         <div className="flex min-h-screen flex-col">
           <TopBar />
@@ -146,6 +148,7 @@ function RootComponent() {
         <WhatsAppFab />
         <Toaster position="bottom-left" theme="dark" />
       </CartProvider>
+      </CurrencyProvider>
     </QueryClientProvider>
   );
 }
