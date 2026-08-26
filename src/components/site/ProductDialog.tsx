@@ -10,7 +10,8 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import type { Product } from "@/data/products";
-import { formatPrice, whatsappUrl } from "@/config/site";
+import { whatsappUrl } from "@/config/site";
+import { useCurrency } from "@/lib/currency";
 import { useCart } from "@/lib/cart";
 
 export function ProductDialog({
@@ -21,6 +22,7 @@ export function ProductDialog({
   onOpenChange: (open: boolean) => void;
 }) {
   const { add } = useCart();
+  const { format } = useCurrency();
   const [qty, setQty] = useState(1);
 
   useEffect(() => {
@@ -74,7 +76,7 @@ export function ProductDialog({
               </dl>
 
               <p className="mt-6 font-display text-4xl text-gold">
-                {formatPrice(product.price * qty)}
+                {format(product.price * qty)}
               </p>
 
               <div className="mt-4 flex items-center gap-3">

@@ -8,22 +8,25 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/lib/cart";
-import { formatPrice, whatsappUrl, SITE } from "@/config/site";
+import { whatsappUrl, SITE } from "@/config/site";
+import { useCurrency } from "@/lib/currency";
 
 export function CartDrawer() {
   const { lines, total, isOpen, setOpen, setQty, remove, clear } = useCart();
+  const { format, currency, rate, rateDate } = useCurrency();
 
   const message = [
     `Hola ${SITE.name}, quiero solicitar estas piezas:`,
     "",
     ...lines.map(
       (l) =>
-        `• ${l.product.name} (${l.product.material}) x${l.qty} — ${formatPrice(
+        `• ${l.product.name} (${l.product.material}) x${l.qty} — ${format(
           l.product.price * l.qty,
         )}`,
     ),
     "",
-    `Total estimado: ${formatPrice(total)}`,
+    `Total estimado: ${format(total)}`,
+    ...(currency === "VES" ? [`(Tasa BCV ${rateDate}: Bs ${rate} por US$1)`] : []),
   ].join("\n");
 
   return (
@@ -91,7 +94,7 @@ export function CartDrawer() {
                         <Trash2 className="size-4" />
                       </button>
                       <span className="ml-auto text-sm text-gold">
-                        {formatPrice(product.price * qty)}
+                        {format(product.price * qty)}
                       </span>
                     </div>
                   </div>
@@ -105,7 +108,7 @@ export function CartDrawer() {
           <div className="flex items-baseline justify-between">
             <span className="eyebrow">Total estimado</span>
             <span className="font-display text-2xl text-gold">
-              {formatPrice(total)}
+              {format(total)}
             </span>
           </div>
           <Button
