@@ -77,9 +77,10 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border/60">
-        <p className="mx-auto max-w-7xl px-4 py-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} {SITE.name}. Todos los derechos reservados.
-        </p>
+        <div className="mx-auto max-w-7xl px-4 py-6 text-center text-xs text-muted-foreground space-y-1">
+          <p>© {new Date().getFullYear()} {SITE.name}. Todos los derechos reservados.</p>
+          <p>Corriendo gracias a Realgestión Ecommerce</p>
+        </div>
       </div>
     </footer>
   );
