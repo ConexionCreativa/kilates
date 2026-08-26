@@ -79,7 +79,14 @@ export function Footer() {
       <div className="border-t border-border/60">
         <div className="mx-auto max-w-7xl px-4 py-6 text-center text-xs text-muted-foreground space-y-1">
           <p>© {new Date().getFullYear()} {SITE.name}. Todos los derechos reservados.</p>
-          <p>Corriendo gracias a Realgestión Ecommerce</p>
+          <a
+            href="https://realgestion.lat/ecommerce"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block transition-colors hover:text-gold"
+          >
+            Corriendo gracias a Realgestión Ecommerce
+          </a>
         </div>
       </div>
     </footer>
