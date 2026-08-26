@@ -25,6 +25,7 @@ export function Catalog({
   onCategoryChange: (category: CategoryId | "todos") => void;
   onQueryChange: (query: string) => void;
 }) {
+  const { currency } = useCurrency();
   const [material, setMaterial] = useState<Material | "todos">("todos");
   const [sort, setSort] = useState<Sort>("destacado");
   const [detail, setDetail] = useState<Product | null>(null);
