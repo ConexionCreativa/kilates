@@ -24,10 +24,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-4">
-        <Link to="/" className="shrink-0">
-          <span className="font-display text-2xl tracking-[0.35em] text-gold-gradient">
-            KILATES
-          </span>
+        <Link to="/" className="shrink-0" aria-label="Kilates — inicio">
+          <img
+            src={logoAsset.url}
+            alt="Kilates"
+            width={376}
+            height={226}
+            className="h-11 w-auto md:h-12"
+          />
         </Link>
 
         <nav className="ml-8 hidden gap-8 md:flex">
