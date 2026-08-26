@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { Menu, Search, ShoppingBag, X } from "lucide-react";
 import { useCart } from "@/lib/cart";
+import logoAsset from "@/assets/kilates-logo.png.asset.json";
 
 const NAV = [
   { to: "/", label: "Inicio" },

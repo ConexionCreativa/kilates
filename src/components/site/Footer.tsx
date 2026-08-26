@@ -7,9 +7,14 @@ export function Footer() {
     <footer className="border-t border-border bg-onyx">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
-          <p className="font-display text-3xl tracking-[0.3em] text-gold-gradient">
-            KILATES
-          </p>
+          <img
+            src={logoAsset.url}
+            alt="Kilates"
+            width={376}
+            height={226}
+            className="h-16 w-auto"
+            loading="lazy"
+          />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Joyería fina en oro y plata. Piezas seleccionadas, certificadas y
             entregadas con la discreción que merece cada ocasión.
