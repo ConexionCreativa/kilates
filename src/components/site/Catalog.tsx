@@ -8,6 +8,7 @@ import {
   type Material,
   type Product,
 } from "@/data/products";
+import { useCurrency } from "@/lib/currency";
 import { ProductCard } from "./ProductCard";
 import { ProductDialog } from "./ProductDialog";
 
@@ -24,6 +25,7 @@ export function Catalog({
   onCategoryChange: (category: CategoryId | "todos") => void;
   onQueryChange: (query: string) => void;
 }) {
+  const { currency } = useCurrency();
   const [material, setMaterial] = useState<Material | "todos">("todos");
   const [sort, setSort] = useState<Sort>("destacado");
   const [detail, setDetail] = useState<Product | null>(null);
@@ -129,7 +131,7 @@ export function Catalog({
         </div>
 
         <p className="text-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
-          {filtered.length} piezas disponibles · precios en USD
+          {filtered.length} piezas disponibles · precios en {currency === "USD" ? "USD" : "bolívares"}
         </p>
       </div>
 

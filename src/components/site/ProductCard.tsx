@@ -1,7 +1,7 @@
 import { Plus } from "lucide-react";
 import { toast } from "sonner";
 import type { Product } from "@/data/products";
-import { formatPrice } from "@/config/site";
+import { useCurrency } from "@/lib/currency";
 import { useCart } from "@/lib/cart";
 
 export function ProductCard({
@@ -12,6 +12,7 @@ export function ProductCard({
   onOpen: (product: Product) => void;
 }) {
   const { add } = useCart();
+  const { format } = useCurrency();
 
   return (
     <article className="group flex flex-col border border-border/70 bg-card transition-colors hover:border-gold/60">
@@ -50,7 +51,7 @@ export function ProductCard({
 
         <div className="mt-4 flex items-end justify-between gap-2 pt-3">
           <span className="font-display text-2xl text-gold">
-            {formatPrice(product.price)}
+            {format(product.price)}
           </span>
           <button
             type="button"

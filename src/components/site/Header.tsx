@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { Menu, Search, ShoppingBag, X } from "lucide-react";
 import { useCart } from "@/lib/cart";
+import { CurrencySwitch } from "@/components/site/CurrencySwitch";
 import logoAsset from "@/assets/kilates-logo.png.asset.json";
 
 const NAV = [
@@ -62,11 +63,13 @@ export function Header() {
           </div>
         </form>
 
+        <CurrencySwitch className="ml-auto lg:ml-4" />
+
         <button
           type="button"
           onClick={() => setOpen(true)}
           aria-label="Abrir selección"
-          className="relative ml-auto inline-flex size-10 items-center justify-center border border-border text-champagne transition-colors hover:border-gold hover:text-gold lg:ml-4"
+          className="relative inline-flex size-10 items-center justify-center border border-border text-champagne transition-colors hover:border-gold hover:text-gold lg:ml-4"
         >
           <ShoppingBag className="size-4" />
           {count > 0 && (
