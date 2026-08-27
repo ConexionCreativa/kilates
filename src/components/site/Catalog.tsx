@@ -14,6 +14,8 @@ import { ProductDialog } from "./ProductDialog";
 
 type Sort = "destacado" | "precio-asc" | "precio-desc";
 
+const PAGE_SIZE = 24;
+
 export function Catalog({
   category,
   query,
