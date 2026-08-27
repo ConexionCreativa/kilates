@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
 import atelier from "@/assets/atelier.jpg";
 import { SITE, whatsappUrl } from "@/config/site";
 

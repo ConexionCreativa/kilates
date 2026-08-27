@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail, MapPin, Clock, Phone, MessageCircle } from "lucide-react";
+import { Instagram, MapPin, Clock, Phone, MessageCircle } from "lucide-react";
 import { SITE } from "@/config/site";
 import logoAsset from "@/assets/kilates-logo.png.asset.json";
 
