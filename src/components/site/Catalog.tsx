@@ -1,5 +1,5 @@
-import { useMemo, useState } from "react";
-import { Search, SlidersHorizontal } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { ChevronLeft, ChevronRight, Search, SlidersHorizontal } from "lucide-react";
 import {
   CATEGORIES,
   MATERIALS,
@@ -13,6 +13,8 @@ import { ProductCard } from "./ProductCard";
 import { ProductDialog } from "./ProductDialog";
 
 type Sort = "destacado" | "precio-asc" | "precio-desc";
+
+const PAGE_SIZE = 24;
 
 export function Catalog({
   category,
@@ -29,6 +31,7 @@ export function Catalog({
   const [material, setMaterial] = useState<Material | "todos">("todos");
   const [sort, setSort] = useState<Sort>("destacado");
   const [detail, setDetail] = useState<Product | null>(null);
+  const [page, setPage] = useState(1);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -48,14 +51,37 @@ export function Catalog({
     return list;
   }, [category, material, query, sort]);
 
+  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+
+  // Reiniciar a la primera página al cambiar filtros y evitar páginas inválidas
+  useEffect(() => {
+    setPage(1);
+  }, [category, material, query, sort]);
+
+  useEffect(() => {
+    if (page > pageCount) setPage(pageCount);
+  }, [page, pageCount]);
+
+  const pageItems = useMemo(
+    () => filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE),
+    [filtered, page],
+  );
+
   const groups = useMemo(
     () =>
       CATEGORIES.map((c) => ({
         ...c,
-        items: filtered.filter((p) => p.category === c.id),
+        items: pageItems.filter((p) => p.category === c.id),
       })).filter((g) => g.items.length > 0),
-    [filtered],
+    [pageItems],
   );
+
+  function goToPage(next: number) {
+    setPage(Math.min(pageCount, Math.max(1, next)));
+    document
+      .getElementById("catalogo")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }
 
   return (
     <section id="catalogo" className="mx-auto max-w-7xl px-4 py-20">
@@ -131,7 +157,8 @@ export function Catalog({
         </div>
 
         <p className="text-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
-          {filtered.length} piezas disponibles · precios en {currency === "USD" ? "USD" : "bolívares"}
+          {filtered.length} piezas · página {page} de {pageCount} · precios en{" "}
+          {currency === "USD" ? "USD" : "bolívares"}
         </p>
       </div>
 
@@ -141,26 +168,69 @@ export function Catalog({
           No encontramos piezas con esos criterios. Pruebe otra búsqueda.
         </p>
       ) : (
-        <div className="mt-14 space-y-16">
-          {groups.map((group) => (
-            <div key={group.id}>
-              <div className="flex items-baseline gap-4">
-                <h3 className="font-display text-3xl font-light">
-                  {group.label}
-                  <span className="ml-2 text-lg text-muted-foreground">
-                    ({group.items.length})
-                  </span>
-                </h3>
-                <div className="gold-rule flex-1" />
+        <>
+          <div className="mt-14 space-y-16">
+            {groups.map((group) => (
+              <div key={group.id}>
+                <div className="flex items-baseline gap-4">
+                  <h3 className="font-display text-3xl font-light">
+                    {group.label}
+                    <span className="ml-2 text-lg text-muted-foreground">
+                      ({group.items.length})
+                    </span>
+                  </h3>
+                  <div className="gold-rule flex-1" />
+                </div>
+                <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {group.items.map((p) => (
+                    <ProductCard key={p.id} product={p} onOpen={setDetail} />
+                  ))}
+                </div>
               </div>
-              <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {group.items.map((p) => (
-                  <ProductCard key={p.id} product={p} onOpen={setDetail} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+
+          {pageCount > 1 && (
+            <nav
+              aria-label="Paginación del catálogo"
+              className="mt-16 flex flex-wrap items-center justify-center gap-2"
+            >
+              <button
+                type="button"
+                onClick={() => goToPage(page - 1)}
+                disabled={page === 1}
+                aria-label="Página anterior"
+                className="inline-flex items-center gap-1 border border-border px-4 py-2 text-[11px] tracking-[0.18em] uppercase transition-colors hover:border-gold hover:text-gold disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:text-current"
+              >
+                <ChevronLeft className="size-4" /> Anterior
+              </button>
+              {Array.from({ length: pageCount }, (_, i) => i + 1).map((n) => (
+                <button
+                  key={n}
+                  type="button"
+                  onClick={() => goToPage(n)}
+                  aria-current={n === page ? "page" : undefined}
+                  className={`min-w-10 border px-3 py-2 text-xs transition-colors ${
+                    n === page
+                      ? "border-gold bg-gold text-primary-foreground"
+                      : "border-border text-muted-foreground hover:border-gold hover:text-gold"
+                  }`}
+                >
+                  {n}
+                </button>
+              ))}
+              <button
+                type="button"
+                onClick={() => goToPage(page + 1)}
+                disabled={page === pageCount}
+                aria-label="Página siguiente"
+                className="inline-flex items-center gap-1 border border-border px-4 py-2 text-[11px] tracking-[0.18em] uppercase transition-colors hover:border-gold hover:text-gold disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:text-current"
+              >
+                Siguiente <ChevronRight className="size-4" />
+              </button>
+            </nav>
+          )}
+        </>
       )}
 
       <ProductDialog
