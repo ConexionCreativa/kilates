@@ -42,7 +42,11 @@ function Contacto() {
             </li>
             <li className="flex gap-3">
               <Phone className="mt-0.5 size-5 shrink-0 text-gold" />
-              <span>{SITE.whatsappDisplay}</span>
+              <span>{SITE.phone}</span>
+            </li>
+            <li className="flex gap-3">
+              <MessageCircle className="mt-0.5 size-5 shrink-0 text-gold" />
+              <span>WhatsApp pedidos: {SITE.whatsappDisplay}</span>
             </li>
             <li className="flex gap-3">
               <Mail className="mt-0.5 size-5 shrink-0 text-gold" />

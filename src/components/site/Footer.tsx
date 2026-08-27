@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail, MapPin, Clock, Phone } from "lucide-react";
+import { Instagram, Mail, MapPin, Clock, Phone, MessageCircle } from "lucide-react";
 import { SITE } from "@/config/site";
 import logoAsset from "@/assets/kilates-logo.png.asset.json";
 
@@ -48,7 +48,11 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li className="flex gap-2">
               <Phone className="mt-0.5 size-4 shrink-0 text-gold" />
-              {SITE.whatsappDisplay}
+              {SITE.phone}
+            </li>
+            <li className="flex gap-2">
+              <MessageCircle className="mt-0.5 size-4 shrink-0 text-gold" />
+              WhatsApp {SITE.whatsappDisplay}
             </li>
             <li className="flex gap-2">
               <Mail className="mt-0.5 size-4 shrink-0 text-gold" />

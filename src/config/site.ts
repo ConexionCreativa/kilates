@@ -1,13 +1,14 @@
 export const SITE = {
-  name: "Kilates",
+  name: "Kilates Joyería",
   tagline: "Alta joyería",
-  /** Número de WhatsApp en formato internacional, sin signos. */
-  whatsapp: "584241234567",
-  whatsappDisplay: "+58 424 123 4567",
-  email: "contacto@kilates.com.ve",
-  address: "C.C. Sambil, Nivel Feria, Local 12 — Caracas, Venezuela",
-  hours: "Lunes a sábado · 10:00 a 19:00",
-  instagram: "https://instagram.com",
+  /** WhatsApp de pedidos en formato internacional, sin signos. */
+  whatsapp: "584141711716",
+  whatsappDisplay: "+58 414 171 1716",
+  phone: "0412 603 7623",
+  email: "sophia170100@gmail.com",
+  address: "Parque Caracas, La Candelaria — Caracas, Distrito Capital, Venezuela",
+  hours: "Atención todos los días · horario completo",
+  instagram: "https://instagram.com/kilates_oyerias",
 } as const;
 
 export function whatsappUrl(message: string) {
