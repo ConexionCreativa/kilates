@@ -31,6 +31,7 @@ export function Catalog({
   const [material, setMaterial] = useState<Material | "todos">("todos");
   const [sort, setSort] = useState<Sort>("destacado");
   const [detail, setDetail] = useState<Product | null>(null);
+  const [page, setPage] = useState(1);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -50,14 +51,37 @@ export function Catalog({
     return list;
   }, [category, material, query, sort]);
 
+  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+
+  // Reiniciar a la primera página al cambiar filtros y evitar páginas inválidas
+  useEffect(() => {
+    setPage(1);
+  }, [category, material, query, sort]);
+
+  useEffect(() => {
+    if (page > pageCount) setPage(pageCount);
+  }, [page, pageCount]);
+
+  const pageItems = useMemo(
+    () => filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE),
+    [filtered, page],
+  );
+
   const groups = useMemo(
     () =>
       CATEGORIES.map((c) => ({
         ...c,
-        items: filtered.filter((p) => p.category === c.id),
+        items: pageItems.filter((p) => p.category === c.id),
       })).filter((g) => g.items.length > 0),
-    [filtered],
+    [pageItems],
   );
+
+  function goToPage(next: number) {
+    setPage(Math.min(pageCount, Math.max(1, next)));
+    document
+      .getElementById("catalogo")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }
 
   return (
     <section id="catalogo" className="mx-auto max-w-7xl px-4 py-20">
