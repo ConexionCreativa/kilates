@@ -46,7 +46,9 @@ export function ProductCard({
         <p className="eyebrow">{product.material}</p>
         <h3 className="mt-1 font-display text-xl leading-tight">{product.name}</h3>
         <p className="mt-1 text-xs text-muted-foreground">
-          {product.detail} · {product.weight} g
+          {[product.detail, product.weight > 0 ? `${product.weight} g` : ""]
+            .filter(Boolean)
+            .join(" · ") || "\u00A0"}
         </p>
 
         <div className="mt-4 flex items-end justify-between gap-2 pt-3">
