@@ -59,14 +59,18 @@ export function ProductDialog({
                   <dt className="text-muted-foreground">Material</dt>
                   <dd>{product.material}</dd>
                 </div>
-                <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Detalle</dt>
-                  <dd>{product.detail}</dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Peso aprox.</dt>
-                  <dd>{product.weight} g</dd>
-                </div>
+                {product.detail && (
+                  <div className="flex justify-between">
+                    <dt className="text-muted-foreground">Detalle</dt>
+                    <dd>{product.detail}</dd>
+                  </div>
+                )}
+                {product.weight > 0 && (
+                  <div className="flex justify-between">
+                    <dt className="text-muted-foreground">Peso aprox.</dt>
+                    <dd>{product.weight} g</dd>
+                  </div>
+                )}
                 <div className="flex justify-between">
                   <dt className="text-muted-foreground">Disponibilidad</dt>
                   <dd className={product.inStock ? "text-gold" : "text-muted-foreground"}>
