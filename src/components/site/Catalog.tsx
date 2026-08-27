@@ -1,5 +1,5 @@
-import { useMemo, useState } from "react";
-import { Search, SlidersHorizontal } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { ChevronLeft, ChevronRight, Search, SlidersHorizontal } from "lucide-react";
 import {
   CATEGORIES,
   MATERIALS,
