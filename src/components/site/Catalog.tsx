@@ -157,7 +157,8 @@ export function Catalog({
         </div>
 
         <p className="text-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
-          {filtered.length} piezas disponibles · precios en {currency === "USD" ? "USD" : "bolívares"}
+          {filtered.length} piezas · página {page} de {pageCount} · precios en{" "}
+          {currency === "USD" ? "USD" : "bolívares"}
         </p>
       </div>
 
