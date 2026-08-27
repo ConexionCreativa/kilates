@@ -5,7 +5,7 @@ export const SITE = {
   whatsapp: "584141711716",
   whatsappDisplay: "+58 414 171 1716",
   phone: "0412 603 7623",
-  email: "sophia170100@gmail.com",
+  
   address: "Parque Caracas, La Candelaria — Caracas, Distrito Capital, Venezuela",
   hours: "Atención todos los días · horario completo",
   instagram: "https://instagram.com/kilates_oyerias",

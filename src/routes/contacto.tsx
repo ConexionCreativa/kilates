@@ -49,10 +49,6 @@ function Contacto() {
               <span>WhatsApp pedidos: {SITE.whatsappDisplay}</span>
             </li>
             <li className="flex gap-3">
-              <Mail className="mt-0.5 size-5 shrink-0 text-gold" />
-              <span>{SITE.email}</span>
-            </li>
-            <li className="flex gap-3">
               <Clock className="mt-0.5 size-5 shrink-0 text-gold" />
               <span>{SITE.hours}</span>
             </li>
