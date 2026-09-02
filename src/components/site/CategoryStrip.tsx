@@ -24,6 +24,7 @@ export function CategoryStrip({
             className="group border border-border/70 bg-card text-left transition-colors hover:border-gold/60"
           >
             <div className="aspect-square overflow-hidden bg-onyx">
+              {c.image ? (
               <img
                 src={c.image}
                 alt={c.label}
@@ -32,6 +33,7 @@ export function CategoryStrip({
                 height={800}
                 className="size-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
+              ) : null}
             </div>
             <div className="p-3">
               <p className="font-display text-lg leading-tight group-hover:text-gold">
