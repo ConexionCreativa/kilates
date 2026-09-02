@@ -1,0 +1,310 @@
+import { useMemo, useState } from "react";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+import { Field, GhostButton, ImageInput, PrimaryButton, inputClass } from "./ui";
+import type { Category, Product } from "@/lib/catalog";
+
+const PAGE_SIZE = 20;
+
+type Draft = Product & { sortOrder?: number };
+
+function emptyDraft(categoryId: string): Draft {
+  return {
+    id: crypto.randomUUID(),
+    name: "",
+    category: categoryId,
+    material: "Oro 18k",
+    weight: 0,
+    detail: "",
+    description: "",
+    price: 0,
+    image: "",
+    inStock: true,
+    isNew: false,
+  };
+}
+
+export function ProductsPanel({
+  products,
+  categories,
+  rate,
+  onRefresh,
+}: {
+  products: Product[];
+  categories: Category[];
+  rate: number;
+  onRefresh: () => Promise<void> | void;
+}) {
+  const [query, setQuery] = useState("");
+  const [cat, setCat] = useState("todos");
+  const [page, setPage] = useState(1);
+  const [draft, setDraft] = useState<Draft | null>(null);
+  const [saving, setSaving] = useState(false);
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return products.filter(
+      (p) =>
+        (cat === "todos" || p.category === cat) &&
+        (!q || p.name.toLowerCase().includes(q)),
+    );
+  }, [products, query, cat]);
+
+  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const current = Math.min(page, pageCount);
+  const items = filtered.slice((current - 1) * PAGE_SIZE, current * PAGE_SIZE);
+
+  async function save() {
+    if (!draft) return;
+    if (!draft.name.trim()) {
+      toast.error("El nombre es obligatorio");
+      return;
+    }
+    setSaving(true);
+    const { error } = await supabase.from("products").upsert({
+      id: draft.id,
+      name: draft.name.trim(),
+      category: draft.category,
+      material: draft.material,
+      weight: draft.weight,
+      detail: draft.detail,
+      description: draft.description,
+      price: draft.price,
+      image: draft.image,
+      in_stock: draft.inStock,
+      is_new: draft.isNew ?? false,
+    });
+    setSaving(false);
+    if (error) {
+      toast.error("No se pudo guardar el producto");
+      return;
+    }
+    toast.success("Producto guardado");
+    setDraft(null);
+    await onRefresh();
+  }
+
+  async function remove(id: string) {
+    if (!window.confirm("¿Eliminar este producto?")) return;
+    const { error } = await supabase.from("products").delete().eq("id", id);
+    if (error) {
+      toast.error("No se pudo eliminar");
+      return;
+    }
+    toast.success("Producto eliminado");
+    await onRefresh();
+  }
+
+  return (
+    <div>
+      <div className="flex flex-wrap items-center gap-3">
+        <input
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            setPage(1);
+          }}
+          placeholder="Buscar producto…"
+          className={`${inputClass} max-w-xs`}
+        />
+        <select
+          value={cat}
+          onChange={(e) => {
+            setCat(e.target.value);
+            setPage(1);
+          }}
+          className={`${inputClass} max-w-[200px]`}
+        >
+          <option value="todos">Todas las categorías</option>
+          {categories.map((c) => (
+            <option key={c.id} value={c.id}>
+              {c.label}
+            </option>
+          ))}
+        </select>
+        <span className="text-xs text-muted-foreground">
+          {filtered.length} productos
+        </span>
+        <PrimaryButton
+          className="ml-auto"
+          onClick={() => setDraft(emptyDraft(categories[0]?.id ?? "anillos"))}
+        >
+          Nuevo producto
+        </PrimaryButton>
+      </div>
+
+      <div className="mt-6 divide-y divide-border border border-border">
+        {items.map((p) => (
+          <div key={p.id} className="flex items-center gap-4 p-3">
+            <img
+              src={p.image}
+              alt={p.name}
+              loading="lazy"
+              className="size-14 shrink-0 border border-border object-cover"
+            />
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-sm">{p.name}</p>
+              <p className="text-xs text-muted-foreground">
+                {p.category} · US$ {p.price.toFixed(2)} · Bs{" "}
+                {Math.round(p.price * rate).toLocaleString("es-VE")}
+                {!p.inStock && " · agotado"}
+              </p>
+            </div>
+            <GhostButton onClick={() => setDraft({ ...p })}>Editar</GhostButton>
+            <GhostButton onClick={() => void remove(p.id)}>Eliminar</GhostButton>
+          </div>
+        ))}
+        {items.length === 0 && (
+          <p className="p-6 text-center text-sm text-muted-foreground">
+            Sin resultados.
+          </p>
+        )}
+      </div>
+
+      {pageCount > 1 && (
+        <div className="mt-4 flex items-center justify-center gap-3">
+          <GhostButton
+            disabled={current === 1}
+            onClick={() => setPage(current - 1)}
+          >
+            Anterior
+          </GhostButton>
+          <span className="text-xs text-muted-foreground">
+            {current} / {pageCount}
+          </span>
+          <GhostButton
+            disabled={current === pageCount}
+            onClick={() => setPage(current + 1)}
+          >
+            Siguiente
+          </GhostButton>
+        </div>
+      )}
+
+      {draft && (
+        <div className="fixed inset-0 z-50 grid place-items-center bg-black/70 p-4">
+          <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto border border-border bg-card p-6">
+            <h2 className="font-display text-2xl font-light">Producto</h2>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <Field label="Nombre">
+                <input
+                  value={draft.name}
+                  onChange={(e) => setDraft({ ...draft, name: e.target.value })}
+                  className={inputClass}
+                />
+              </Field>
+              <Field label="Categoría">
+                <select
+                  value={draft.category}
+                  onChange={(e) => setDraft({ ...draft, category: e.target.value })}
+                  className={inputClass}
+                >
+                  {categories.map((c) => (
+                    <option key={c.id} value={c.id}>
+                      {c.label}
+                    </option>
+                  ))}
+                </select>
+              </Field>
+              <Field label="Material">
+                <input
+                  value={draft.material}
+                  onChange={(e) => setDraft({ ...draft, material: e.target.value })}
+                  className={inputClass}
+                />
+              </Field>
+              <Field label="Peso (g)">
+                <input
+                  type="number"
+                  step="0.01"
+                  value={draft.weight}
+                  onChange={(e) =>
+                    setDraft({ ...draft, weight: Number(e.target.value) })
+                  }
+                  className={inputClass}
+                />
+              </Field>
+              <Field label="Precio USD">
+                <input
+                  type="number"
+                  step="0.01"
+                  value={draft.price}
+                  onChange={(e) =>
+                    setDraft({ ...draft, price: Number(e.target.value) })
+                  }
+                  className={inputClass}
+                />
+              </Field>
+              <Field label="Precio en bolívares">
+                <input
+                  type="number"
+                  step="1"
+                  value={Math.round(draft.price * rate)}
+                  onChange={(e) =>
+                    setDraft({ ...draft, price: Number(e.target.value) / rate })
+                  }
+                  className={inputClass}
+                />
+              </Field>
+              <Field label="Detalle corto">
+                <input
+                  value={draft.detail}
+                  onChange={(e) => setDraft({ ...draft, detail: e.target.value })}
+                  className={inputClass}
+                />
+              </Field>
+              <div className="flex items-end gap-6">
+                <label className="flex items-center gap-2 text-xs text-muted-foreground uppercase">
+                  <input
+                    type="checkbox"
+                    checked={draft.inStock}
+                    onChange={(e) =>
+                      setDraft({ ...draft, inStock: e.target.checked })
+                    }
+                  />
+                  Disponible
+                </label>
+                <label className="flex items-center gap-2 text-xs text-muted-foreground uppercase">
+                  <input
+                    type="checkbox"
+                    checked={draft.isNew ?? false}
+                    onChange={(e) => setDraft({ ...draft, isNew: e.target.checked })}
+                  />
+                  Novedad
+                </label>
+              </div>
+              <div className="md:col-span-2">
+                <Field label="Descripción">
+                  <textarea
+                    rows={3}
+                    value={draft.description}
+                    onChange={(e) =>
+                      setDraft({ ...draft, description: e.target.value })
+                    }
+                    className={inputClass}
+                  />
+                </Field>
+              </div>
+              <div className="md:col-span-2">
+                <Field label="Imagen">
+                  <ImageInput
+                    value={draft.image}
+                    onChange={(url) => setDraft({ ...draft, image: url })}
+                  />
+                </Field>
+              </div>
+            </div>
+
+            <div className="mt-6 flex justify-end gap-3">
+              <GhostButton onClick={() => setDraft(null)}>Cancelar</GhostButton>
+              <PrimaryButton disabled={saving} onClick={() => void save()}>
+                {saving ? "Guardando…" : "Guardar"}
+              </PrimaryButton>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

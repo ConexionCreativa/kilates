@@ -1,7 +1,9 @@
 import { MessageCircle } from "lucide-react";
-import { whatsappUrl } from "@/config/site";
+import { useSettings, whatsappLink } from "@/lib/catalog";
 
 export function WhatsAppFab() {
+  const SITE = useSettings();
+  const whatsappUrl = (m: string) => whatsappLink(SITE.whatsapp, m);
   return (
     <a
       href={whatsappUrl("Hola Kilates, me gustaría recibir asesoría sobre sus piezas.")}

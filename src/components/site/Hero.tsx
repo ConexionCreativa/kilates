@@ -1,8 +1,10 @@
 import { MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero-joyeria.jpg";
-import { whatsappUrl } from "@/config/site";
+import { useSettings, whatsappLink } from "@/lib/catalog";
 
 export function Hero() {
+  const SITE = useSettings();
+  const whatsappUrl = (m: string) => whatsappLink(SITE.whatsapp, m);
   return (
     <section className="relative isolate overflow-hidden">
       <img

@@ -1,13 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight, Search, SlidersHorizontal } from "lucide-react";
-import {
-  CATEGORIES,
-  MATERIALS,
-  PRODUCTS,
-  type CategoryId,
-  type Material,
-  type Product,
-} from "@/data/products";
+import { MATERIALS, type CategoryId, type Material, type Product } from "@/data/products";
+import { useCategories, useProducts } from "@/lib/catalog";
 import { useCurrency } from "@/lib/currency";
 import { ProductCard } from "./ProductCard";
 import { ProductDialog } from "./ProductDialog";
@@ -28,6 +22,8 @@ export function Catalog({
   onQueryChange: (query: string) => void;
 }) {
   const { currency } = useCurrency();
+  const PRODUCTS = useProducts();
+  const CATEGORIES = useCategories();
   const [material, setMaterial] = useState<Material | "todos">("todos");
   const [sort, setSort] = useState<Sort>("destacado");
   const [detail, setDetail] = useState<Product | null>(null);
@@ -49,7 +45,7 @@ export function Catalog({
     if (sort === "precio-asc") return [...list].sort((a, b) => a.price - b.price);
     if (sort === "precio-desc") return [...list].sort((a, b) => b.price - a.price);
     return list;
-  }, [category, material, query, sort]);
+  }, [category, material, query, sort, PRODUCTS]);
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
 
@@ -73,7 +69,7 @@ export function Catalog({
         ...c,
         items: pageItems.filter((p) => p.category === c.id),
       })).filter((g) => g.items.length > 0),
-    [pageItems],
+    [pageItems, CATEGORIES],
   );
 
   function goToPage(next: number) {

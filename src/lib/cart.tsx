@@ -7,13 +7,13 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { PRODUCTS, type Product } from "@/data/products";
+import type { Product } from "@/lib/catalog.functions";
 
-const STORAGE_KEY = "kilates-cart-v1";
+const STORAGE_KEY = "kilates-cart-v2";
 
 export type CartLine = { product: Product; qty: number };
 
-type CartState = Record<string, number>;
+type CartState = Record<string, CartLine>;
 
 type CartContextValue = {
   lines: CartLine[];
@@ -54,14 +54,18 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }, [state, hydrated]);
 
   const add = useCallback((product: Product, qty = 1) => {
-    setState((prev) => ({ ...prev, [product.id]: (prev[product.id] ?? 0) + qty }));
+    setState((prev) => ({
+      ...prev,
+      [product.id]: { product, qty: (prev[product.id]?.qty ?? 0) + qty },
+    }));
   }, []);
 
   const setQty = useCallback((id: string, qty: number) => {
     setState((prev) => {
       const next = { ...prev };
-      if (qty <= 0) delete next[id];
-      else next[id] = qty;
+      const line = next[id];
+      if (qty <= 0 || !line) delete next[id];
+      else next[id] = { ...line, qty };
       return next;
     });
   }, []);
@@ -76,16 +80,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const clear = useCallback(() => setState({}), []);
 
-  const lines = useMemo(
-    () =>
-      Object.entries(state)
-        .map(([id, qty]) => {
-          const product = PRODUCTS.find((p) => p.id === id);
-          return product ? { product, qty } : null;
-        })
-        .filter((line): line is CartLine => line !== null),
-    [state],
-  );
+  const lines = useMemo(() => Object.values(state), [state]);
 
   const value = useMemo<CartContextValue>(
     () => ({

@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ColeccionRouteImport } from './routes/coleccion'
 import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as RgAdminRouteImport } from './routes/rg-admin'
+import { Route as ApiPublicImgSplatRouteImport } from './routes/api/public/img/$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +30,60 @@ const ContactoRoute = ContactoRouteImport.update({
   path: '/contacto',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RgAdminRoute = RgAdminRouteImport.update({
+  id: '/rg-admin',
+  path: '/rg-admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicImgSplatRoute = ApiPublicImgSplatRouteImport.update({
+  id: '/api/public/img/$',
+  path: '/api/public/img/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/coleccion': typeof ColeccionRoute
   '/contacto': typeof ContactoRoute
+  '/rg-admin': typeof RgAdminRoute
+  '/api/public/img/$': typeof ApiPublicImgSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/coleccion': typeof ColeccionRoute
   '/contacto': typeof ContactoRoute
+  '/rg-admin': typeof RgAdminRoute
+  '/api/public/img/$': typeof ApiPublicImgSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/coleccion': typeof ColeccionRoute
   '/contacto': typeof ContactoRoute
+  '/rg-admin': typeof RgAdminRoute
+  '/api/public/img/$': typeof ApiPublicImgSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/coleccion' | '/contacto'
+  fullPaths:
+    '/' | '/coleccion' | '/contacto' | '/rg-admin' | '/api/public/img/$'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/coleccion' | '/contacto'
-  id: '__root__' | '/' | '/coleccion' | '/contacto'
+  to: '/' | '/coleccion' | '/contacto' | '/rg-admin' | '/api/public/img/$'
+  id:
+    | '__root__'
+    | '/'
+    | '/coleccion'
+    | '/contacto'
+    | '/rg-admin'
+    | '/api/public/img/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ColeccionRoute: typeof ColeccionRoute
   ContactoRoute: typeof ContactoRoute
+  RgAdminRoute: typeof RgAdminRoute
+  ApiPublicImgSplatRoute: typeof ApiPublicImgSplatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +109,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/rg-admin': {
+      id: '/rg-admin'
+      path: '/rg-admin'
+      fullPath: '/rg-admin'
+      preLoaderRoute: typeof RgAdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/img/$': {
+      id: '/api/public/img/$'
+      path: '/api/public/img/$'
+      fullPath: '/api/public/img/$'
+      preLoaderRoute: typeof ApiPublicImgSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +130,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ColeccionRoute: ColeccionRoute,
   ContactoRoute: ContactoRoute,
+  RgAdminRoute: RgAdminRoute,
+  ApiPublicImgSplatRoute: ApiPublicImgSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

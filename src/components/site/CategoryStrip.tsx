@@ -1,10 +1,13 @@
-import { CATEGORIES, type CategoryId } from "@/data/products";
+import type { CategoryId } from "@/data/products";
+import { useCategories } from "@/lib/catalog";
 
 export function CategoryStrip({
   onSelect,
 }: {
   onSelect: (category: CategoryId) => void;
 }) {
+  const CATEGORIES = useCategories();
+
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
       <div className="text-center">

@@ -1,9 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, MapPin, Clock, Phone, MessageCircle } from "lucide-react";
-import { SITE } from "@/config/site";
+import { useSettings } from "@/lib/catalog";
 import logoAsset from "@/assets/kilates-logo.png.asset.json";
 
 export function Footer() {
+  const SITE = useSettings();
+
   return (
     <footer className="border-t border-border bg-onyx">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-4">
