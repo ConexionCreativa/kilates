@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import type { Product } from "@/data/products";
-import { whatsappUrl } from "@/config/site";
+import { useSettings, whatsappLink } from "@/lib/catalog";
 import { useCurrency } from "@/lib/currency";
 import { useCart } from "@/lib/cart";
 
@@ -22,6 +22,8 @@ export function ProductDialog({
   onOpenChange: (open: boolean) => void;
 }) {
   const { add } = useCart();
+  const SITE = useSettings();
+  const whatsappUrl = (m: string) => whatsappLink(SITE.whatsapp, m);
   const { format } = useCurrency();
   const [qty, setQty] = useState(1);
 

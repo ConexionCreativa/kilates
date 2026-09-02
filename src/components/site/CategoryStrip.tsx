@@ -1,10 +1,13 @@
-import { CATEGORIES, type CategoryId } from "@/data/products";
+import type { CategoryId } from "@/data/products";
+import { useCategories } from "@/lib/catalog";
 
 export function CategoryStrip({
   onSelect,
 }: {
   onSelect: (category: CategoryId) => void;
 }) {
+  const CATEGORIES = useCategories();
+
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
       <div className="text-center">
@@ -21,6 +24,7 @@ export function CategoryStrip({
             className="group border border-border/70 bg-card text-left transition-colors hover:border-gold/60"
           >
             <div className="aspect-square overflow-hidden bg-onyx">
+              {c.image ? (
               <img
                 src={c.image}
                 alt={c.label}
@@ -29,6 +33,7 @@ export function CategoryStrip({
                 height={800}
                 className="size-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
+              ) : null}
             </div>
             <div className="p-3">
               <p className="font-display text-lg leading-tight group-hover:text-gold">

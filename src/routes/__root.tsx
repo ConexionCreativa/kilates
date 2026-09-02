@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -19,6 +20,8 @@ import { TopBar } from "@/components/site/TopBar";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import { Toaster } from "@/components/ui/sonner";
+import { CatalogProvider } from "@/lib/catalog";
+import { getCatalog } from "@/lib/catalog.functions";
 
 function NotFoundComponent() {
   return (
@@ -79,6 +82,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  loader: () => getCatalog(),
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -130,25 +134,36 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const catalog = Route.useLoaderData();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isAdmin = pathname.startsWith("/rg-admin");
 
   return (
     <QueryClientProvider client={queryClient}>
-      <CurrencyProvider>
-      <CartProvider>
-        <div className="flex min-h-screen flex-col">
-          <TopBar />
-          <Header />
-          <main className="flex-1">
-            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-            <Outlet />
-          </main>
-          <Footer />
-        </div>
-        <CartDrawer />
-        <WhatsAppFab />
-        <Toaster position="bottom-left" theme="dark" />
-      </CartProvider>
-      </CurrencyProvider>
+      <CatalogProvider value={catalog}>
+        <CurrencyProvider>
+          <CartProvider>
+            {isAdmin ? (
+              <Outlet />
+            ) : (
+              <>
+                <div className="flex min-h-screen flex-col">
+                  <TopBar />
+                  <Header />
+                  <main className="flex-1">
+                    {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+                    <Outlet />
+                  </main>
+                  <Footer />
+                </div>
+                <CartDrawer />
+                <WhatsAppFab />
+              </>
+            )}
+            <Toaster position="bottom-left" theme="dark" />
+          </CartProvider>
+        </CurrencyProvider>
+      </CatalogProvider>
     </QueryClientProvider>
   );
 }

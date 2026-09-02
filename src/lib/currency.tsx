@@ -1,10 +1,10 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { useSettings } from "@/lib/catalog";
 
 export type Currency = "USD" | "VES";
 
-/** Tasa de referencia BCV. Actualícela aquí cuando cambie. */
+/** Tasa de respaldo si el back office no tiene un valor cargado. */
 export const RATE_VES_PER_USD = 787.52;
-export const RATE_DATE = "26/08/2026";
 
 const STORAGE_KEY = "kilates.currency";
 
@@ -27,14 +27,16 @@ export function formatUsd(value: number) {
   }).format(value);
 }
 
-export function formatVes(value: number) {
+export function formatVes(value: number, rate: number = RATE_VES_PER_USD) {
   return `Bs ${new Intl.NumberFormat("es-VE", {
     maximumFractionDigits: 0,
-  }).format(Math.round(value * RATE_VES_PER_USD))}`;
+  }).format(Math.round(value * rate))}`;
 }
 
 export function CurrencyProvider({ children }: { children: React.ReactNode }) {
   const [currency, setCurrency] = useState<Currency>("VES");
+  const settings = useSettings();
+  const rate = settings.usdRate || RATE_VES_PER_USD;
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -50,11 +52,12 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
       currency,
       setCurrency,
       toggle: () => setCurrency((c) => (c === "USD" ? "VES" : "USD")),
-      rate: RATE_VES_PER_USD,
-      rateDate: RATE_DATE,
-      format: (usd: number) => (currency === "USD" ? formatUsd(usd) : formatVes(usd)),
+      rate,
+      rateDate: new Date().toLocaleDateString("es-VE"),
+      format: (usd: number) =>
+        currency === "USD" ? formatUsd(usd) : formatVes(usd, rate),
     }),
-    [currency],
+    [currency, rate],
   );
 
   return <CurrencyContext.Provider value={value}>{children}</CurrencyContext.Provider>;

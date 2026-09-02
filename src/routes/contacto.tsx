@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
 import atelier from "@/assets/atelier.jpg";
-import { SITE, whatsappUrl } from "@/config/site";
+import { useSettings, whatsappLink } from "@/lib/catalog";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
@@ -24,6 +24,9 @@ export const Route = createFileRoute("/contacto")({
 });
 
 function Contacto() {
+  const SITE = useSettings();
+  const whatsappUrl = (m: string) => whatsappLink(SITE.whatsapp, m);
+
   return (
     <>
       <div className="border-b border-border bg-onyx py-14 text-center">
