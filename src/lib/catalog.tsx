@@ -1,4 +1,4 @@
-import { createContext, useContext, type ReactNode } from "react";
+import { createContext, useContext, useMemo, type ReactNode } from "react";
 import {
   DEFAULT_SETTINGS,
   type CatalogData,
@@ -6,6 +6,7 @@ import {
   type Product,
   type SiteSettings,
 } from "./catalog.functions";
+import { localImage } from "./local-images";
 
 export type { CatalogData, Category, Product, SiteSettings };
 
@@ -24,8 +25,26 @@ export function CatalogProvider({
   value: CatalogData;
   children: ReactNode;
 }) {
-  return <CatalogContext.Provider value={value}>{children}</CatalogContext.Provider>;
+  const normalized = useMemo<CatalogData>(
+    () => ({
+      ...value,
+      products: value.products.map((p) => ({
+        ...p,
+        image: localImage(p.image, p.category, p.id),
+      })),
+      categories: value.categories.map((c) => ({
+        ...c,
+        image: localImage(c.image, c.id, c.id),
+      })),
+    }),
+    [value],
+  );
+
+  return (
+    <CatalogContext.Provider value={normalized}>{children}</CatalogContext.Provider>
+  );
 }
+
 
 export function useCatalog() {
   return useContext(CatalogContext);
