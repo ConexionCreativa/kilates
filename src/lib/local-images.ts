@@ -32,15 +32,52 @@ function pick(pool: string[], seed: string) {
   return pool[h % pool.length]!;
 }
 
+/** Mapeo automático de todas las imágenes reales de productos en assets/product_images. */
+const PRODUCT_IMAGE_MODULES = import.meta.glob<string>(
+  "@/assets/product_images/*",
+  { eager: true, import: "default" },
+);
+
+const PRODUCT_IMAGE_MAP: Record<string, string> = {};
+for (const [path, url] of Object.entries(PRODUCT_IMAGE_MODULES)) {
+  const filename = path.split("/").pop();
+  if (filename) {
+    PRODUCT_IMAGE_MAP[filename] = url;
+    PRODUCT_IMAGE_MAP[`assets/product_images/${filename}`] = url;
+    PRODUCT_IMAGE_MAP[`/assets/product_images/${filename}`] = url;
+    PRODUCT_IMAGE_MAP[`product_images/${filename}`] = url;
+  }
+}
+
 /** Sustituye imágenes externas o vacías por una imagen local del proyecto. */
 export function localImage(image: string | null | undefined, category: string, seed: string) {
   const src = (image ?? "").trim();
+  if (!src) {
+    const pool = BY_CATEGORY[category] ?? FALLBACK;
+    return pick(pool, seed || category);
+  }
+
+  // 1. Coincidencia directa por ruta registrada en el mapa
+  if (PRODUCT_IMAGE_MAP[src]) {
+    return PRODUCT_IMAGE_MAP[src];
+  }
+
+  // 2. Extraer nombre de archivo si viene de una URL externa o ruta completa
+  const filename = src.split("/").pop()?.split("?")[0];
+  if (filename && PRODUCT_IMAGE_MAP[filename]) {
+    return PRODUCT_IMAGE_MAP[filename];
+  }
+
+  // 3. URLs locales directas o subidas
   const isLocalOrUploaded =
     src.startsWith("/api/public/img/") ||
     src.startsWith("/__l5e/") ||
     src.startsWith("/assets/") ||
+    src.startsWith("assets/") ||
     src.startsWith("data:");
-  if (src && isLocalOrUploaded) return src;
+  if (isLocalOrUploaded) return src;
+
+  // 4. Fallback por categoría
   const pool = BY_CATEGORY[category] ?? FALLBACK;
   return pick(pool, seed || category);
 }

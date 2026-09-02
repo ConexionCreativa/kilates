@@ -11,7 +11,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7,5",
     description: "Peso: 1.9 Grs. Medida: 7,5.",
     price: 390.847217,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-28-15-39-45-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-28-15-39-45-1.jpg",
     inStock: true,
   },
   {
@@ -23,7 +23,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.5 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/PHOTO-2025-12-23-17-51-42.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-23-17-51-42.jpg",
     inStock: true,
   },
   {
@@ -35,7 +35,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 6",
     description: "Peso: 1.7 Grs. Medida: 6.",
     price: 349.705404,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-F3649EF9-1137-4F9F-A248-5FA7F64FB3E0.jpeg",
+    image: "/assets/product_images/original-F3649EF9-1137-4F9F-A248-5FA7F64FB3E0.jpeg",
     inStock: true,
   },
   {
@@ -47,7 +47,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.6 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/original-4B7CEECD-6441-4E02-B2E4-C475116F5D84.jpeg",
+    image: "/assets/product_images/original-4B7CEECD-6441-4E02-B2E4-C475116F5D84.jpeg",
     inStock: true,
   },
   {
@@ -59,7 +59,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7,5",
     description: "Peso: 1. 4 Grs. Medida: 7,5.",
     price: 287.992686,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-28-15-39-45-9.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-28-15-39-45-9.jpg",
     inStock: true,
   },
   {
@@ -71,7 +71,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 9",
     description: "Peso: 2.5 Grs. Medida: 9.",
     price: 514.272653,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-BF107EC1-D3A8-4149-8B0E-29139EF2F407.jpeg",
+    image: "/assets/product_images/original-BF107EC1-D3A8-4149-8B0E-29139EF2F407.jpeg",
     inStock: true,
   },
   {
@@ -83,7 +83,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 10",
     description: "Peso: 3.5 Grs. Medida: 10.",
     price: 719.981715,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/processed-1D9C3010-D947-4840-9F03-61A4FCB65DF2.jpeg",
+    image: "/assets/product_images/processed-1D9C3010-D947-4840-9F03-61A4FCB65DF2.jpeg",
     inStock: true,
   },
   {
@@ -95,7 +95,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Alto",
     description: "Peso: 0.4 Grs. Medida: 1 Cm De Alto.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-46-3.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-46-3.jpg",
     inStock: true,
   },
   {
@@ -107,7 +107,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 10,5 Cm",
     description: "Peso: 8.6 Grs. Medida: 10,5 Cm.",
     price: 1769.097928,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/processed-FE18B390-71D1-41C9-88FD-D74BAC06736B.jpeg",
+    image: "/assets/product_images/processed-FE18B390-71D1-41C9-88FD-D74BAC06736B.jpeg",
     inStock: true,
   },
   {
@@ -119,7 +119,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.5 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-6F54A6C5-916B-483B-8D31-E619F00765A8.jpeg",
+    image: "/assets/product_images/original-6F54A6C5-916B-483B-8D31-E619F00765A8.jpeg",
     inStock: true,
   },
   {
@@ -131,7 +131,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2 Cm De Alto",
     description: "Peso: 0.8 Grs. Medida: 2 Cm De Alto.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-47-7.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-47-7.jpg",
     inStock: true,
   },
   {
@@ -143,7 +143,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 5,5",
     description: "Peso: 2.8 Grs. Medida: 5,5.",
     price: 575.985372,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-28-15-39-45-10-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-28-15-39-45-10-1.jpg",
     inStock: true,
   },
   {
@@ -155,7 +155,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 9",
     description: "Peso: 3.1 Grs. Medida: 9.",
     price: 50.792361,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-E30E260B-8A20-4D13-9818-12B05264632B-1.jpeg",
+    image: "/assets/product_images/original-E30E260B-8A20-4D13-9818-12B05264632B-1.jpeg",
     inStock: true,
   },
   {
@@ -167,7 +167,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 5,5",
     description: "Peso: 3.6 Grs. Medida: 5,5.",
     price: 2514.221861,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/11/processed-38D186C6-6454-493B-B94C-9D477956F1A6.jpeg",
+    image: "/assets/product_images/processed-38D186C6-6454-493B-B94C-9D477956F1A6.jpeg",
     inStock: true,
   },
   {
@@ -179,7 +179,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7",
     description: "Peso: 2.2 Grs. Medida: 7.",
     price: 50.792361,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-16B31C79-5453-4BAE-BFC2-8216FD72C471.jpeg",
+    image: "/assets/product_images/original-16B31C79-5453-4BAE-BFC2-8216FD72C471.jpeg",
     inStock: true,
   },
   {
@@ -191,7 +191,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7",
     description: "Peso: 3.3 Grs. Medida: 7.",
     price: 50.792361,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-AB4E0AD5-C4DF-4726-900F-C280EE51DE90.jpeg",
+    image: "/assets/product_images/original-AB4E0AD5-C4DF-4726-900F-C280EE51DE90.jpeg",
     inStock: true,
   },
   {
@@ -203,7 +203,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7",
     description: "Peso: 2.7 Grs. Medida: 7.",
     price: 50.792361,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-362BC6BB-28A0-4829-9A00-426E6DAACA71.jpeg",
+    image: "/assets/product_images/original-362BC6BB-28A0-4829-9A00-426E6DAACA71.jpeg",
     inStock: true,
   },
   {
@@ -215,7 +215,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 8",
     description: "Peso: 1.7 Grs. Medida: 8.",
     price: 349.705404,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-28-15-39-45-6.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-28-15-39-45-6.jpg",
     inStock: true,
   },
   {
@@ -227,7 +227,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 6.5",
     description: "Peso: 3.2 Grs. Medida: 6.5.",
     price: 658.268996,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-5FF8E2A6-2177-4FA2-8C8F-6849FD893E3D.jpeg",
+    image: "/assets/product_images/original-5FF8E2A6-2177-4FA2-8C8F-6849FD893E3D.jpeg",
     inStock: true,
   },
   {
@@ -239,7 +239,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 8",
     description: "Peso: 1.3 Grs. Medida: 8.",
     price: 267.421780,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/11/original-41DA03CC-DB8E-4CF5-83E7-15702A72B60F.jpeg",
+    image: "/assets/product_images/original-41DA03CC-DB8E-4CF5-83E7-15702A72B60F.jpeg",
     inStock: true,
   },
   {
@@ -251,7 +251,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 10",
     description: "Peso: 4.2 Grs. Medida: 10.",
     price: 863.978058,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-62C069D5-4160-48B9-908E-9AC65AD42565.jpeg",
+    image: "/assets/product_images/original-62C069D5-4160-48B9-908E-9AC65AD42565.jpeg",
     inStock: true,
   },
   {
@@ -263,7 +263,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 6,5",
     description: "Peso: 3 Grs. Medida: 6,5.",
     price: 50.792361,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-C94C605C-BC43-420B-9330-68F81EB054EF.jpeg",
+    image: "/assets/product_images/original-C94C605C-BC43-420B-9330-68F81EB054EF.jpeg",
     inStock: true,
   },
   {
@@ -275,7 +275,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 8",
     description: "Peso: 3.2 Grs. Medida: 8.",
     price: 50.792361,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-145D996D-44C6-407A-A5FB-E439E72BD77F.jpeg",
+    image: "/assets/product_images/original-145D996D-44C6-407A-A5FB-E439E72BD77F.jpeg",
     inStock: true,
   },
   {
@@ -287,7 +287,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 8",
     description: "Peso: 2 Grs. Medida: 8.",
     price: 411.418123,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-28-15-39-44-2.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-28-15-39-44-2.jpg",
     inStock: true,
   },
   {
@@ -299,7 +299,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7,5",
     description: "Peso: 1.1 Grs. Medida: 7,5.",
     price: 226.279967,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-8837AE39-A2E1-464A-B63B-17080F12D30B.jpeg",
+    image: "/assets/product_images/original-8837AE39-A2E1-464A-B63B-17080F12D30B.jpeg",
     inStock: true,
   },
   {
@@ -311,7 +311,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 10",
     description: "Peso: 3.7 Grs. Medida: 10.",
     price: 761.123527,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/original-03CB51BF-0CDB-4338-B347-A5BDC02CD8DC.jpeg",
+    image: "/assets/product_images/original-03CB51BF-0CDB-4338-B347-A5BDC02CD8DC.jpeg",
     inStock: true,
   },
   {
@@ -323,7 +323,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 6,5",
     description: "Peso: 2,7 Grs. Medida: 6,5.",
     price: 1371.393742,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/11/processed-9F2ED202-0A64-41BA-B22F-7C59829C698D.jpeg",
+    image: "/assets/product_images/processed-9F2ED202-0A64-41BA-B22F-7C59829C698D.jpeg",
     inStock: true,
   },
   {
@@ -335,7 +335,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2",
     description: "Peso: 0,8. Medida: 2.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-8FD92C4D-5347-451D-92FA-FEBD7C1AFCBC.jpeg",
+    image: "/assets/product_images/original-8FD92C4D-5347-451D-92FA-FEBD7C1AFCBC.jpeg",
     inStock: true,
   },
   {
@@ -347,7 +347,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 5",
     description: "Peso: 2.8 Grs. Medida: 5.",
     price: 1714.242178,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/11/processed-A4A9B2A1-3745-40F5-AD9F-E6F936BA1F36.jpeg",
+    image: "/assets/product_images/processed-A4A9B2A1-3745-40F5-AD9F-E6F936BA1F36.jpeg",
     inStock: true,
   },
   {
@@ -359,7 +359,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7",
     description: "Peso: 1. Medida: 7.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-2D9BA6CA-9521-4F16-85ED-738B498C8F2D.jpeg",
+    image: "/assets/product_images/original-2D9BA6CA-9521-4F16-85ED-738B498C8F2D.jpeg",
     inStock: true,
   },
   {
@@ -371,7 +371,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 9,5",
     description: "Peso: 3.4 Grs. Medida: 9,5.",
     price: 699.410809,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-12DC55D4-5EBD-4C58-B8A5-564216D98C97.jpeg",
+    image: "/assets/product_images/original-12DC55D4-5EBD-4C58-B8A5-564216D98C97.jpeg",
     inStock: true,
   },
   {
@@ -383,7 +383,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 6,5",
     description: "Peso: 1.2 Grs. Medida: 6,5.",
     price: 246.850874,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-28-15-39-45-7.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-28-15-39-45-7.jpg",
     inStock: true,
   },
   {
@@ -395,7 +395,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 6,5",
     description: "Peso: 1.5 Grs. Medida: 6,5.",
     price: 308.563592,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-5883C1B0-1FB6-4D86-A651-EF93F065098A.jpeg",
+    image: "/assets/product_images/original-5883C1B0-1FB6-4D86-A651-EF93F065098A.jpeg",
     inStock: true,
   },
   {
@@ -407,7 +407,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 6,5",
     description: "Peso: 1.2 Grs. Medida: 6,5.",
     price: 246.850874,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-1CB419A2-8E47-4C82-AAED-1DFBD5BCFB0F-2.jpeg",
+    image: "/assets/product_images/original-1CB419A2-8E47-4C82-AAED-1DFBD5BCFB0F-2.jpeg",
     inStock: true,
   },
   {
@@ -419,7 +419,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7,5",
     description: "Peso: 1.3 Grs. Medida: 7,5.",
     price: 267.421780,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-28-15-39-45-5.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-28-15-39-45-5.jpg",
     inStock: true,
   },
   {
@@ -431,7 +431,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,5 Cm De Diámetro",
     description: "Peso: 1.4 Grs. Medida: 1,5 Cm De Diámetro.",
     price: 287.992686,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/PHOTO-2026-03-02-16-04-21-7.jpg",
+    image: "/assets/product_images/PHOTO-2026-03-02-16-04-21-7.jpg",
     inStock: true,
   },
   {
@@ -443,7 +443,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7",
     description: "Peso: 3.1 Grs. Medida: 7.",
     price: 637.698090,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/11/original-04AE2373-9CD4-4CA2-9822-EB72B2A0AE41.jpeg",
+    image: "/assets/product_images/original-04AE2373-9CD4-4CA2-9822-EB72B2A0AE41.jpeg",
     inStock: true,
   },
   {
@@ -455,7 +455,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1.4 Cm De Diámetro",
     description: "Peso: 1.9 Grs. Medida: 1.4 Cm De Diámetro.",
     price: 390.847217,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-994E59EE-F113-4B6B-98E3-C87DC265088B.jpeg",
+    image: "/assets/product_images/original-994E59EE-F113-4B6B-98E3-C87DC265088B.jpeg",
     inStock: true,
   },
   {
@@ -467,7 +467,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 11,5",
     description: "Peso: 4.1 Grs. Medida: 11,5.",
     price: 843.407152,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/processed-FBFD722B-6934-43CE-A84B-62679A6FB4B9.jpeg",
+    image: "/assets/product_images/processed-FBFD722B-6934-43CE-A84B-62679A6FB4B9.jpeg",
     inStock: true,
   },
   {
@@ -479,7 +479,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 12",
     description: "Peso: 3.9 Grs. Medida: 12.",
     price: 802.265339,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-32575763-A0B8-4647-A3BD-C92A3C18D34F-1.jpeg",
+    image: "/assets/product_images/original-32575763-A0B8-4647-A3BD-C92A3C18D34F-1.jpeg",
     inStock: true,
   },
   {
@@ -491,7 +491,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2 Cm De Diámetro",
     description: "Peso: 1.7 Grs. Medida: 2 Cm De Diámetro.",
     price: 349.705404,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/original-2C2A954D-6A77-4B08-9D89-51422BE3F4A4-1.jpeg",
+    image: "/assets/product_images/original-2C2A954D-6A77-4B08-9D89-51422BE3F4A4-1.jpeg",
     inStock: true,
   },
   {
@@ -503,7 +503,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 6",
     description: "Peso: 1.4 Grs. Medida: 6.",
     price: 20.316944,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-B7CF8049-30B3-4C41-99AF-CACDE70480D6.jpeg",
+    image: "/assets/product_images/original-B7CF8049-30B3-4C41-99AF-CACDE70480D6.jpeg",
     inStock: true,
   },
   {
@@ -515,7 +515,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 5",
     description: "Peso: 1.8 Grs. Medida: 5.",
     price: 370.276310,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-9256A5B4-5EC4-42CA-B1E8-1D8163CBC434.jpeg",
+    image: "/assets/product_images/original-9256A5B4-5EC4-42CA-B1E8-1D8163CBC434.jpeg",
     inStock: true,
   },
   {
@@ -527,7 +527,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 5 Mm De Diámetro",
     description: "Peso: 0.3 Grs. Medida: 5 Mm De Diámetro.",
     price: 159.995937,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/PHOTO-2026-03-02-16-04-21-5.jpg",
+    image: "/assets/product_images/PHOTO-2026-03-02-16-04-21-5.jpg",
     inStock: true,
   },
   {
@@ -539,7 +539,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,3 Cm Diámetro",
     description: "Peso: 0,6 Grs. Medida: 1,3 Cm Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-E1E1557F-C450-4567-861D-EBD8C6770B82.jpeg",
+    image: "/assets/product_images/original-E1E1557F-C450-4567-861D-EBD8C6770B82.jpeg",
     inStock: true,
   },
   {
@@ -551,7 +551,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7,5",
     description: "Peso: 10.5 Grs. Medida: 7,5.",
     price: 2159.945144,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-28-15-39-45.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-28-15-39-45.jpg",
     inStock: true,
   },
   {
@@ -563,7 +563,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,3 Cm de Diámetro",
     description: "Peso:  1 Grs. Medida: 1,3 Cm de Diámetro.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/PHOTO-2026-03-02-16-04-21-8.jpg",
+    image: "/assets/product_images/PHOTO-2026-03-02-16-04-21-8.jpg",
     inStock: true,
   },
   {
@@ -575,7 +575,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2 Cm De Diámetro",
     description: "Peso: 2.1 Grs. Medida: 2 Cm De Diámetro.",
     price: 431.989029,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/original-CE49D3B3-46F1-4BBD-A658-F53E0BFF3D06-1.jpeg",
+    image: "/assets/product_images/original-CE49D3B3-46F1-4BBD-A658-F53E0BFF3D06-1.jpeg",
     inStock: true,
   },
   {
@@ -587,7 +587,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.7 Grs.",
     price: 349.705404,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/original-49C9295C-3057-4C7F-AD1E-D1688A9FFC9E-1.jpeg",
+    image: "/assets/product_images/original-49C9295C-3057-4C7F-AD1E-D1688A9FFC9E-1.jpeg",
     inStock: true,
   },
   {
@@ -599,7 +599,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1.5 Cm De Diámetro",
     description: "Peso: 1.2 Grs. Medida: 1.5 Cm De Diámetro.",
     price: 246.850874,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/original-3459AB5D-80B8-4048-92C1-0AA014158495.jpeg",
+    image: "/assets/product_images/original-3459AB5D-80B8-4048-92C1-0AA014158495.jpeg",
     inStock: true,
   },
   {
@@ -611,7 +611,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,8 Cm De Diámetro",
     description: "Peso: 1.6 Grs. Medida: 1,8 Cm De Diámetro.",
     price: 329.134498,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/original-CFC0D90C-5E10-4069-9C4E-A89071858760.jpeg",
+    image: "/assets/product_images/original-CFC0D90C-5E10-4069-9C4E-A89071858760.jpeg",
     inStock: true,
   },
   {
@@ -623,7 +623,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.6 Grs.",
     price: 329.134498,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2025-12-22-15-31-59-4.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-22-15-31-59-4.jpg",
     inStock: true,
   },
   {
@@ -635,7 +635,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1.4 Cm De Diámetro",
     description: "Peso: 1.1 Grs. Medida: 1.4 Cm De Diámetro.",
     price: 226.279967,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/PHOTO-2026-03-02-16-04-21-9.jpg",
+    image: "/assets/product_images/PHOTO-2026-03-02-16-04-21-9.jpg",
     inStock: true,
   },
   {
@@ -647,7 +647,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 8 Mm de Diámetro",
     description: "Peso: 1.3 Grs. Medida: 8 Mm de Diámetro.",
     price: 267.421780,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/PHOTO-2025-12-24-12-41-52-2.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-24-12-41-52-2.jpg",
     inStock: true,
   },
   {
@@ -659,7 +659,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1.8 Cm De Diámetro",
     description: "Peso: 1.8 Grs. Medida: 1.8 Cm De Diámetro.",
     price: 370.276310,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/original-FAB810F2-1D7D-4AB1-A0C9-92A711A8B93E.jpeg",
+    image: "/assets/product_images/original-FAB810F2-1D7D-4AB1-A0C9-92A711A8B93E.jpeg",
     inStock: true,
   },
   {
@@ -671,7 +671,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.5 Grs.",
     price: 308.563592,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2025-12-22-15-31-59-1.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-22-15-31-59-1.jpg",
     inStock: true,
   },
   {
@@ -683,7 +683,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm de Diámetro",
     description: "Peso: 1.8 Grs. Medida: 1 Cm de Diámetro.",
     price: 370.276310,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/PHOTO-2025-12-24-12-41-52-1.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-24-12-41-52-1.jpg",
     inStock: true,
   },
   {
@@ -695,7 +695,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,1 Cm De Diámetro",
     description: "Peso: 1.3 Grs. Medida: 1,1 Cm De Diámetro.",
     price: 267.421780,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2025-12-22-15-31-58-2.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-22-15-31-58-2.jpg",
     inStock: true,
   },
   {
@@ -707,7 +707,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,5 Cm de Diámetro",
     description: "Peso: 2.2 Grs. Medida: 1,5 Cm de Diámetro.",
     price: 452.559935,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/PHOTO-2025-12-24-12-41-51-1.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-24-12-41-51-1.jpg",
     inStock: true,
   },
   {
@@ -719,7 +719,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 2.4 Grs.",
     price: 493.701747,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/11/PHOTO-2025-12-22-14-25-01.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-22-14-25-01.jpg",
     inStock: true,
   },
   {
@@ -731,7 +731,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 40 Cm/1 Mm",
     description: "Peso: 2.9 Grs. Medida: 40 Cm/1 Mm.",
     price: 16.571008,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-343F5562-99F8-4079-B94B-3939EF89C174.jpeg",
+    image: "/assets/product_images/processed-343F5562-99F8-4079-B94B-3939EF89C174.jpeg",
     inStock: true,
   },
   {
@@ -743,7 +743,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 55 Cm / 4 Mm",
     description: "Peso: 6.6 Grs. Medida: 55 Cm / 4 Mm.",
     price: 1357.679805,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/processed-77D9D2CE-792D-4E92-9DD1-D4C623FD8BAF.jpeg",
+    image: "/assets/product_images/processed-77D9D2CE-792D-4E92-9DD1-D4C623FD8BAF.jpeg",
     inStock: true,
   },
   {
@@ -755,7 +755,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 64 Cm/3Mm",
     description: "Peso: 17.4 Grs. Medida: 64 Cm/3Mm.",
     price: 99.426046,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-AF0F7260-1E9C-4B64-8921-EFF6289A378D.jpeg",
+    image: "/assets/product_images/processed-AF0F7260-1E9C-4B64-8921-EFF6289A378D.jpeg",
     inStock: true,
   },
   {
@@ -767,7 +767,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.7 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/PHOTO-2025-12-23-17-04-58.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-23-17-04-58.jpg",
     inStock: true,
   },
   {
@@ -779,7 +779,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 50 Cm/1Mm",
     description: "Peso: 3.6 Grs. Medida: 50 Cm/1Mm.",
     price: 740.552621,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-CBAA48E5-66C4-405B-989B-696DC7A55685.jpeg",
+    image: "/assets/product_images/processed-CBAA48E5-66C4-405B-989B-696DC7A55685.jpeg",
     inStock: true,
   },
   {
@@ -791,7 +791,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 45 Cm/2 Mm",
     description: "Peso: 1.6 Grs. Medida: 45 Cm/2 Mm.",
     price: 329.134498,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/original-B082CF11-35C2-4975-B1EB-E50DD5459A06-1.jpeg",
+    image: "/assets/product_images/original-B082CF11-35C2-4975-B1EB-E50DD5459A06-1.jpeg",
     inStock: true,
   },
   {
@@ -803,7 +803,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 52 Cm/1 Mm · Balines: 4 Mm",
     description: "Peso: 4.3 Grs. Medida: 52 Cm/1 Mm. Balines: 4 Mm.",
     price: 884.548964,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-3AC65BEF-A51C-4839-B688-3548E0B06B01.jpeg",
+    image: "/assets/product_images/processed-3AC65BEF-A51C-4839-B688-3548E0B06B01.jpeg",
     inStock: true,
   },
   {
@@ -815,7 +815,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 56 Cm/2 Mm",
     description: "Peso: 4.9 Grs. Medida: 56 Cm/2 Mm.",
     price: 1007.974401,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-0E63CE78-5941-4D21-A01A-E788DEF75E4D-1.jpeg",
+    image: "/assets/product_images/processed-0E63CE78-5941-4D21-A01A-E788DEF75E4D-1.jpeg",
     inStock: true,
   },
   {
@@ -827,7 +827,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 42 Cm/1 Mm",
     description: "Peso: 6.2 Grs. Medida: 42 Cm/1 Mm.",
     price: 55.109711,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-5A22DE46-DA75-4683-B21B-DA02CF80C7A3.jpeg",
+    image: "/assets/product_images/processed-5A22DE46-DA75-4683-B21B-DA02CF80C7A3.jpeg",
     inStock: true,
   },
   {
@@ -839,7 +839,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 45 Cm/2 Mm",
     description: "Peso: 2.2 Grs. Medida: 45 Cm/2 Mm.",
     price: 19.555059,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-C5974374-D8C6-4013-9946-0879315B2A37-3.jpeg",
+    image: "/assets/product_images/processed-C5974374-D8C6-4013-9946-0879315B2A37-3.jpeg",
     inStock: true,
   },
   {
@@ -851,7 +851,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 59 Cm/2 Mm",
     description: "Peso: 2.4 Grs. Medida: 59 Cm/2 Mm.",
     price: 493.701747,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/processed-B9D46DFA-29EA-4817-A954-3D3D9B7E868D.jpeg",
+    image: "/assets/product_images/processed-B9D46DFA-29EA-4817-A954-3D3D9B7E868D.jpeg",
     inStock: true,
   },
   {
@@ -863,7 +863,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 43 Cm / 2 Mm",
     description: "Peso: 2.9 Grs. Medida: 43 Cm / 2 Mm.",
     price: 596.556278,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/processed-BF3A449A-D551-42D1-A69A-A300E02845C4-1.jpeg",
+    image: "/assets/product_images/processed-BF3A449A-D551-42D1-A69A-A300E02845C4-1.jpeg",
     inStock: true,
   },
   {
@@ -875,7 +875,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.5 Grs.",
     price: 308.563592,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/11/PHOTO-2025-12-23-17-51-42-2.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-23-17-51-42-2.jpg",
     inStock: true,
   },
   {
@@ -887,7 +887,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 45 Cm",
     description: "Peso: 4.3 Grs. Medida: 45 Cm.",
     price: 884.548964,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-46DB0D06-7520-4454-811F-542D7A4D48CD-1.jpeg",
+    image: "/assets/product_images/processed-46DB0D06-7520-4454-811F-542D7A4D48CD-1.jpeg",
     inStock: true,
   },
   {
@@ -899,7 +899,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 9 Mm de diámetro",
     description: "Peso: 0.5 Grs. Medida: 9 Mm de diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-82115710-BEE5-4B05-99B2-0B6AB5DBD1C4.jpeg",
+    image: "/assets/product_images/original-82115710-BEE5-4B05-99B2-0B6AB5DBD1C4.jpeg",
     inStock: true,
   },
   {
@@ -911,7 +911,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 8 Mm De Diámetro",
     description: "Peso: 0.5 Grs. Medida: 8 Mm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-16-04-26-7.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-16-04-26-7.jpg",
     inStock: true,
   },
   {
@@ -923,7 +923,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 40 Cm / 1 Mm",
     description: "Peso: 2.6 Grs. Medida: 40 Cm / 1 Mm.",
     price: 534.843560,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/processed-016528CD-3826-4F83-AC41-8A00AB2D9509.jpeg",
+    image: "/assets/product_images/processed-016528CD-3826-4F83-AC41-8A00AB2D9509.jpeg",
     inStock: true,
   },
   {
@@ -935,7 +935,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2,3 Cm de Alto",
     description: "Peso: 1.5 Grs. Medida: 2,3 Cm de Alto.",
     price: 308.563592,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-B3A7A7FB-D6CA-47B8-9D18-2002F0FD885D.jpeg",
+    image: "/assets/product_images/original-B3A7A7FB-D6CA-47B8-9D18-2002F0FD885D.jpeg",
     inStock: true,
   },
   {
@@ -947,7 +947,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1.5 Cm De Diámetro",
     description: "Peso: 1.4 Grs. Medida: 1.5 Cm De Diámetro.",
     price: 287.992686,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-16-04-26-5.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-16-04-26-5.jpg",
     inStock: true,
   },
   {
@@ -959,7 +959,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 1 Grs. Medida: 1 Cm De Diámetro.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/PHOTO-2026-01-12-16-04-26-3.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-16-04-26-3.jpg",
     inStock: true,
   },
   {
@@ -971,7 +971,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.1 Grs.",
     price: 226.279967,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2025-12-26-15-09-56.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-26-15-09-56.jpg",
     inStock: true,
   },
   {
@@ -983,7 +983,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 9 Mm",
     description: "Peso: 0.7 Grs. Medida: 9 Mm.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-46-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-46-1.jpg",
     inStock: true,
   },
   {
@@ -995,7 +995,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm de Diámetro",
     description: "Peso: 1.1 Grs. Medida: 1 Cm de Diámetro.",
     price: 226.279967,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-0480CB0E-CFB0-4721-84BD-61E9D73F2BF7.jpeg",
+    image: "/assets/product_images/original-0480CB0E-CFB0-4721-84BD-61E9D73F2BF7.jpeg",
     inStock: true,
   },
   {
@@ -1007,7 +1007,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 6 Mm De Diametr0",
     description: "Peso: 0.5 Grs. Medida: 6 Mm De Diametr0.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-16-04-25-2.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-16-04-25-2.jpg",
     inStock: true,
   },
   {
@@ -1019,7 +1019,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 4 Cm de Alto",
     description: "Peso: 2.9 Grs. Medida: 4 Cm de Alto.",
     price: 596.556278,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-AF7F4819-9065-42CB-B63C-A224ED4044E8-1.jpeg",
+    image: "/assets/product_images/original-AF7F4819-9065-42CB-B63C-A224ED4044E8-1.jpeg",
     inStock: true,
   },
   {
@@ -1031,7 +1031,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 3 Cm De Alto",
     description: "Peso: 1.5 Grs. Medida: 3 Cm De Alto.",
     price: 308.563592,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-9CE0A232-CBEF-43B2-AB57-07D8F3FACE30.jpeg",
+    image: "/assets/product_images/original-9CE0A232-CBEF-43B2-AB57-07D8F3FACE30.jpeg",
     inStock: true,
   },
   {
@@ -1043,7 +1043,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 4 Cm de Alto",
     description: "Peso: 4.3 Grs. Medida: 4 Cm de Alto.",
     price: 884.548964,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-CCC9C09D-B72A-4534-A46D-850A210A55C4.jpeg",
+    image: "/assets/product_images/original-CCC9C09D-B72A-4534-A46D-850A210A55C4.jpeg",
     inStock: true,
   },
   {
@@ -1055,7 +1055,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 3 Cm De Alto",
     description: "Peso: 1,2 Grs. Medida: 3 Cm De Alto.",
     price: 246.850874,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-47984F59-8473-4081-8277-5A2FB6484C7D.jpeg",
+    image: "/assets/product_images/original-47984F59-8473-4081-8277-5A2FB6484C7D.jpeg",
     inStock: true,
   },
   {
@@ -1067,7 +1067,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 4 Cm de Alto",
     description: "Peso: 4.7 Grs. Medida: 4 Cm de Alto.",
     price: 966.832588,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-E7D623E7-1EF2-4DB9-951F-1FF2553F1B18-1.jpeg",
+    image: "/assets/product_images/original-E7D623E7-1EF2-4DB9-951F-1FF2553F1B18-1.jpeg",
     inStock: true,
   },
   {
@@ -1079,7 +1079,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 3,7 Cm De Alto",
     description: "Peso: 2.5 Grs. Medida: 3,7 Cm De Alto.",
     price: 514.272653,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-75E0EE6F-13F0-45E0-AC91-E1BE136EC0B5.jpeg",
+    image: "/assets/product_images/original-75E0EE6F-13F0-45E0-AC91-E1BE136EC0B5.jpeg",
     inStock: true,
   },
   {
@@ -1091,7 +1091,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.8 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2025-12-23-17-04-58-4.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-23-17-04-58-4.jpg",
     inStock: true,
   },
   {
@@ -1103,7 +1103,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 3,4 Cm de Alto",
     description: "Peso: 3.2 Grs. Medida: 3,4 Cm de Alto.",
     price: 658.268996,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-1DD25CEA-323E-4A46-A6DB-7CC1C35F7D26.jpeg",
+    image: "/assets/product_images/original-1DD25CEA-323E-4A46-A6DB-7CC1C35F7D26.jpeg",
     inStock: true,
   },
   {
@@ -1115,7 +1115,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 4 Cm De Alto",
     description: "Peso: 3.5 Grs. Medida: 4 Cm De Alto.",
     price: 719.981715,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-C412801E-3FCE-4340-BB7C-9FEACC3507D5.jpeg",
+    image: "/assets/product_images/original-C412801E-3FCE-4340-BB7C-9FEACC3507D5.jpeg",
     inStock: true,
   },
   {
@@ -1127,7 +1127,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 2.2 Grs.",
     price: 452.559935,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/07/original-146165C2-450D-45D9-8C01-019B5CA4EF2B.jpeg",
+    image: "/assets/product_images/original-146165C2-450D-45D9-8C01-019B5CA4EF2B.jpeg",
     inStock: true,
   },
   {
@@ -1139,7 +1139,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 2.6 Grs.",
     price: 534.843560,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/08/original-12F7FCC3-3CB3-4F7A-A4EF-0EBDCA421E90.jpeg",
+    image: "/assets/product_images/original-12F7FCC3-3CB3-4F7A-A4EF-0EBDCA421E90.jpeg",
     inStock: true,
   },
   {
@@ -1151,7 +1151,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2 Cm De Alto",
     description: "Peso: 0.4 Grs. Medida: 2 Cm De Alto.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-44-2.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-44-2.jpg",
     inStock: true,
   },
   {
@@ -1163,7 +1163,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 3,5 Cm De Alto",
     description: "Peso: 2.5 Grs. Medida: 3,5 Cm De Alto.",
     price: 514.272653,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-4BE43F74-9932-4B85-8382-782C495D2AEC.jpeg",
+    image: "/assets/product_images/original-4BE43F74-9932-4B85-8382-782C495D2AEC.jpeg",
     inStock: true,
   },
   {
@@ -1175,7 +1175,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 14 Cm de Alto",
     description: "Peso: 0.3 Grs. Medida: 14 Cm de Alto.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-61202538-4B24-4295-AB1C-1C3A2D0FA9DC.jpeg",
+    image: "/assets/product_images/original-61202538-4B24-4295-AB1C-1C3A2D0FA9DC.jpeg",
     inStock: true,
   },
   {
@@ -1187,7 +1187,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1.5 Cm De Alto",
     description: "Peso: 0.6 Grs. Medida: 1.5 Cm De Alto.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-450E03C5-2988-483B-B757-668B2E2C03A6-1.jpeg",
+    image: "/assets/product_images/original-450E03C5-2988-483B-B757-668B2E2C03A6-1.jpeg",
     inStock: true,
   },
   {
@@ -1199,7 +1199,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2,5 Cm De Alto",
     description: "Peso: 1,7. Medida: 2,5 Cm De Alto.",
     price: 349.705404,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-13E99342-8EE7-497E-81C5-32EC7F6E4FAC.jpeg",
+    image: "/assets/product_images/original-13E99342-8EE7-497E-81C5-32EC7F6E4FAC.jpeg",
     inStock: true,
   },
   {
@@ -1211,7 +1211,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 15 Mm De Alto",
     description: "Peso: 0.4 Grs. Medida: 15 Mm De Alto.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-47-5.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-47-5.jpg",
     inStock: true,
   },
   {
@@ -1223,7 +1223,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 3 Cm de Alto",
     description: "Peso: 4.7 Grs. Medida: 3 Cm de Alto.",
     price: 966.832588,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-464C872B-EB3E-49C6-A6FC-37818A2095AC.jpeg",
+    image: "/assets/product_images/original-464C872B-EB3E-49C6-A6FC-37818A2095AC.jpeg",
     inStock: true,
   },
   {
@@ -1235,7 +1235,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 14 Mm de Alto",
     description: "Peso: 1.5 Grs. Medida: 14 Mm de Alto.",
     price: 308.563592,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-6519211F-0A42-43EF-B01F-B1BAAE89E144.jpeg",
+    image: "/assets/product_images/original-6519211F-0A42-43EF-B01F-B1BAAE89E144.jpeg",
     inStock: true,
   },
   {
@@ -1247,7 +1247,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0,6 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/08/original-450E03C5-2988-483B-B757-668B2E2C03A6-3-1.jpeg",
+    image: "/assets/product_images/original-450E03C5-2988-483B-B757-668B2E2C03A6-3-1.jpeg",
     inStock: true,
   },
   {
@@ -1259,7 +1259,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,5 Cm De Alto",
     description: "Peso: 0.4 Grs. Medida: 1,5 Cm De Alto.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-16-04-26-6.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-16-04-26-6.jpg",
     inStock: true,
   },
   {
@@ -1271,7 +1271,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 2.4 Grs.",
     price: 493.701747,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-8FD6E6C1-8AC4-4D61-B931-8CFA284C00C2.jpeg",
+    image: "/assets/product_images/original-8FD6E6C1-8AC4-4D61-B931-8CFA284C00C2.jpeg",
     inStock: true,
   },
   {
@@ -1283,7 +1283,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.3 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-46-4.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-46-4.jpg",
     inStock: true,
   },
   {
@@ -1295,7 +1295,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.3 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-47-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-47-1.jpg",
     inStock: true,
   },
   {
@@ -1307,7 +1307,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 3.6 Cm de Alto",
     description: "Peso: 1.9 Grs. Medida: 3.6 Cm de Alto.",
     price: 390.847217,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-14C04233-8A53-478A-BF02-729550B6C07C.jpeg",
+    image: "/assets/product_images/original-14C04233-8A53-478A-BF02-729550B6C07C.jpeg",
     inStock: true,
   },
   {
@@ -1319,7 +1319,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.5 Grs.",
     price: 308.563592,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-B45A19F1-17F6-421E-BC48-D81871606BFA-2.jpeg",
+    image: "/assets/product_images/original-B45A19F1-17F6-421E-BC48-D81871606BFA-2.jpeg",
     inStock: true,
   },
   {
@@ -1331,7 +1331,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm de Diámetro",
     description: "Peso: 0,8 Grs. Medida: 1 Cm de Diámetro.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-44BEEBA1-6B75-410B-A5A2-F4407BD37900-1.jpeg",
+    image: "/assets/product_images/original-44BEEBA1-6B75-410B-A5A2-F4407BD37900-1.jpeg",
     inStock: true,
   },
   {
@@ -1343,7 +1343,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 0.6 Grs. Medida: 1 Cm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-48-5.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-48-5.jpg",
     inStock: true,
   },
   {
@@ -1355,7 +1355,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2 Cm De Alto",
     description: "Peso: 1.4 Grs. Medida: 2 Cm De Alto.",
     price: 287.992686,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-F95D2317-DA92-40CD-BBE0-361060A2490D-1.jpeg",
+    image: "/assets/product_images/original-F95D2317-DA92-40CD-BBE0-361060A2490D-1.jpeg",
     inStock: true,
   },
   {
@@ -1367,7 +1367,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 3 Cm De Alto",
     description: "Peso: 2.1 Grs. Medida: 3 Cm De Alto.",
     price: 431.989029,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-A0FA8D64-869C-4CCD-AB47-49E3C8E29572.jpeg",
+    image: "/assets/product_images/original-A0FA8D64-869C-4CCD-AB47-49E3C8E29572.jpeg",
     inStock: true,
   },
   {
@@ -1379,7 +1379,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2 Cm De Alto",
     description: "Peso: 1 Grs. Medida: 2 Cm De Alto.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/PHOTO-2025-12-26-14-32-05-7.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-26-14-32-05-7.jpg",
     inStock: true,
   },
   {
@@ -1391,7 +1391,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 3 Cm De Diametro",
     description: "Peso: 8.9 Grs. Medida: 3 Cm De Diametro.",
     price: 1830.810646,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-46.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-46.jpg",
     inStock: true,
   },
   {
@@ -1403,7 +1403,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,4 Cm De Diámetro",
     description: "Peso: 0.9 Grs. Medida: 1,4 Cm De Diámetro.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-54131FDD-0D76-49AF-BCE2-E453B286B87C.jpeg",
+    image: "/assets/product_images/original-54131FDD-0D76-49AF-BCE2-E453B286B87C.jpeg",
     inStock: true,
   },
   {
@@ -1415,7 +1415,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 3 Cm De Alto",
     description: "Peso: 1.8 Grs. Medida: 3 Cm De Alto.",
     price: 370.276310,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-16-04-26-4.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-16-04-26-4.jpg",
     inStock: true,
   },
   {
@@ -1427,7 +1427,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 3,6 Cm De Alto",
     description: "Peso: 1.9 Grs. Medida: 3,6 Cm De Alto.",
     price: 390.847217,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-8BF4A349-0DD5-49DD-AA3D-0C61627A0973.jpeg",
+    image: "/assets/product_images/original-8BF4A349-0DD5-49DD-AA3D-0C61627A0973.jpeg",
     inStock: true,
   },
   {
@@ -1439,7 +1439,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 17 Mm de Diametro",
     description: "Peso: 2.2 Grs. Medida: 17 Mm de Diametro.",
     price: 452.559935,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-2FE621D6-FEBA-44AF-84EC-C33E2C921275.jpeg",
+    image: "/assets/product_images/original-2FE621D6-FEBA-44AF-84EC-C33E2C921275.jpeg",
     inStock: true,
   },
   {
@@ -1451,7 +1451,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0,8 Grs.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-9A54A748-31CD-47D0-8CC0-DD6043623EB8.jpeg",
+    image: "/assets/product_images/original-9A54A748-31CD-47D0-8CC0-DD6043623EB8.jpeg",
     inStock: true,
   },
   {
@@ -1463,7 +1463,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 15 Mm de Diámetro",
     description: "Peso: 1.6 Grs. Medida: 15 Mm de Diámetro.",
     price: 329.134498,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-4DC7CEDD-7BAD-45B9-9146-D43098C0A58A.jpeg",
+    image: "/assets/product_images/original-4DC7CEDD-7BAD-45B9-9146-D43098C0A58A.jpeg",
     inStock: true,
   },
   {
@@ -1475,7 +1475,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 17 Mm",
     description: "Peso: 4.5 Grs. Medida: 17 Mm.",
     price: 925.690776,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/11/original-1CBF18EA-0D85-4D3F-8FD6-B605826649F9.jpeg",
+    image: "/assets/product_images/original-1CBF18EA-0D85-4D3F-8FD6-B605826649F9.jpeg",
     inStock: true,
   },
   {
@@ -1487,7 +1487,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.7 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/PHOTO-2025-12-23-17-51-42-5.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-23-17-51-42-5.jpg",
     inStock: true,
   },
   {
@@ -1499,7 +1499,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.1 Grs.",
     price: 226.279967,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-5503C23F-1646-4640-80FD-E70DCDD838E0-1.jpeg",
+    image: "/assets/product_images/original-5503C23F-1646-4640-80FD-E70DCDD838E0-1.jpeg",
     inStock: true,
   },
   {
@@ -1511,7 +1511,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 13 Cm",
     description: "Peso: 2.1 Grs. Medida: 13 Cm.",
     price: 431.989029,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/PHOTO-2026-01-10-11-22-45-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-10-11-22-45-1.jpg",
     inStock: true,
   },
   {
@@ -1523,7 +1523,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.2 Grs.",
     price: 246.850874,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-112A2F6F-3015-4541-90AA-5E053D71BB68.jpeg",
+    image: "/assets/product_images/original-112A2F6F-3015-4541-90AA-5E053D71BB68.jpeg",
     inStock: true,
   },
   {
@@ -1535,7 +1535,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 13 Cm",
     description: "Peso: 3.3 Grs. Medida: 13 Cm.",
     price: 678.839902,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/PHOTO-2026-01-10-11-22-45.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-10-11-22-45.jpg",
     inStock: true,
   },
   {
@@ -1547,7 +1547,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 16,5 Cm",
     description: "Peso: 3 Grs. Medida: 16,5 Cm.",
     price: 617.127184,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/PHOTO-2026-01-10-11-22-45-3.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-10-11-22-45-3.jpg",
     inStock: true,
   },
   {
@@ -1559,7 +1559,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.4 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/PHOTO-2025-12-23-17-51-42-3.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-23-17-51-42-3.jpg",
     inStock: true,
   },
   {
@@ -1571,7 +1571,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 0.4 Grs. Medida: 1 Cm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-47-8.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-47-8.jpg",
     inStock: true,
   },
   {
@@ -1583,7 +1583,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Alto",
     description: "Peso: 0.5 Grs. Medida: 1 Cm De Alto.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-48-4.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-48-4.jpg",
     inStock: true,
   },
   {
@@ -1595,7 +1595,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 45 Cm/4 Mm",
     description: "Peso: 18.9 Grs. Medida: 45 Cm/4 Mm.",
     price: 167.995733,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-C6DEA8CC-3785-4A4E-9FCF-2E705E3C5B5F-1.jpeg",
+    image: "/assets/product_images/processed-C6DEA8CC-3785-4A4E-9FCF-2E705E3C5B5F-1.jpeg",
     inStock: true,
   },
   {
@@ -1607,7 +1607,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7 Mm de Diámetro",
     description: "Peso: 0.6 Grs. Medida: 7 Mm de Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-4862A536-CBCF-4386-BC4D-7BDB7319470D.jpeg",
+    image: "/assets/product_images/original-4862A536-CBCF-4386-BC4D-7BDB7319470D.jpeg",
     inStock: true,
   },
   {
@@ -1619,7 +1619,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 40 Cm",
     description: "Peso: 7.3 Grs. Medida: 40 Cm.",
     price: 1501.676148,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/processed-452E4CD1-A86B-4D2D-8B49-356FA5BB178B.jpeg",
+    image: "/assets/product_images/processed-452E4CD1-A86B-4D2D-8B49-356FA5BB178B.jpeg",
     inStock: true,
   },
   {
@@ -1631,7 +1631,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 45 Cm / 3 Mm",
     description: "Peso: 3.9 Grs. Medida: 45 Cm / 3 Mm.",
     price: 802.265339,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/09/processed-C330B1DD-9A65-469A-8AED-7A9B94F0D629.jpeg",
+    image: "/assets/product_images/processed-C330B1DD-9A65-469A-8AED-7A9B94F0D629.jpeg",
     inStock: true,
   },
   {
@@ -1643,7 +1643,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 12 Mm de Diámetro.",
     description: "Peso: 0.5 Grs. Medida: 12 Mm de Diámetro..",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-AC1DFCC0-DEF3-48B7-AA29-353CEBDF9903.jpeg",
+    image: "/assets/product_images/original-AC1DFCC0-DEF3-48B7-AA29-353CEBDF9903.jpeg",
     inStock: true,
   },
   {
@@ -1655,7 +1655,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm/4 Mm",
     description: "Peso: 15.1 Grs. Medida: 60 Cm/4 Mm.",
     price: 134.218813,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-7DA49BE4-CB3C-47B2-9AFE-37FE85E8E234.jpeg",
+    image: "/assets/product_images/processed-7DA49BE4-CB3C-47B2-9AFE-37FE85E8E234.jpeg",
     inStock: true,
   },
   {
@@ -1667,7 +1667,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 13 Mm de Diámetro",
     description: "Peso: 0.8 Grs. Medida: 13 Mm de Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-80F29FC6-05D3-4AD5-844B-D7B5E495E281.jpeg",
+    image: "/assets/product_images/original-80F29FC6-05D3-4AD5-844B-D7B5E495E281.jpeg",
     inStock: true,
   },
   {
@@ -1679,7 +1679,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0,6 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/07/original-0D55816D-8377-498F-9FA2-2C9EE8A3ADBE.jpeg",
+    image: "/assets/product_images/original-0D55816D-8377-498F-9FA2-2C9EE8A3ADBE.jpeg",
     inStock: true,
   },
   {
@@ -1691,7 +1691,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.3 Grs.",
     price: 267.421780,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-A3AB07E2-7BC4-461D-BFC2-4DB5B5828F7C.jpeg",
+    image: "/assets/product_images/original-A3AB07E2-7BC4-461D-BFC2-4DB5B5828F7C.jpeg",
     inStock: true,
   },
   {
@@ -1703,7 +1703,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.9 Grs.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/07/original-4A53681D-6772-4DFD-BE99-025CB0FAED6D.jpeg",
+    image: "/assets/product_images/original-4A53681D-6772-4DFD-BE99-025CB0FAED6D.jpeg",
     inStock: true,
   },
   {
@@ -1715,7 +1715,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 43 Cm / 3 Mm",
     description: "Peso: 6.7 Grs. Medida: 43 Cm / 3 Mm.",
     price: 1378.250711,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/09/processed-86068DD4-BE79-4706-AE57-DA170C4A9954.jpeg",
+    image: "/assets/product_images/processed-86068DD4-BE79-4706-AE57-DA170C4A9954.jpeg",
     inStock: true,
   },
   {
@@ -1727,7 +1727,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,2 Cm De Diámetro",
     description: "Peso: 0,8 Grs. Medida: 1,2 Cm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-15-25-56.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-15-25-56.jpg",
     inStock: true,
   },
   {
@@ -1739,7 +1739,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 15 Cm",
     description: "Peso: 3.1 Grs. Medida: 15 Cm.",
     price: 637.698090,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/PHOTO-2026-01-10-11-22-45-4.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-10-11-22-45-4.jpg",
     inStock: true,
   },
   {
@@ -1751,7 +1751,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7 Mm De Diámetro",
     description: "Peso: 0,8 Grs. Medida: 7 Mm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-15-26-00.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-15-26-00.jpg",
     inStock: true,
   },
   {
@@ -1763,7 +1763,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 0.7 Grs. Medida: 1 Cm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-15-26-06.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-15-26-06.jpg",
     inStock: true,
   },
   {
@@ -1775,7 +1775,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 0.7 Grs. Medida: 1 Cm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-15-26-05-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-15-26-05-1.jpg",
     inStock: true,
   },
   {
@@ -1787,7 +1787,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 1 Grs. Medida: 1 Cm De Diámetro.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-15-26-03.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-15-26-03.jpg",
     inStock: true,
   },
   {
@@ -1799,7 +1799,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 0.8 Grs. Medida: 1 Cm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-15-26-01.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-15-26-01.jpg",
     inStock: true,
   },
   {
@@ -1811,7 +1811,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,2 Cm De Diámetro",
     description: "Peso: 0,6 Grs. Medida: 1,2 Cm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-15-25-58-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-15-25-58-1.jpg",
     inStock: true,
   },
   {
@@ -1823,7 +1823,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 4 Mm De Diámetro",
     description: "Peso: 0,6 Grs. Medida: 4 Mm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-15-25-57.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-15-25-57.jpg",
     inStock: true,
   },
   {
@@ -1835,7 +1835,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,2 Cm De Diámetro",
     description: "Peso: 0,8 Grs. Medida: 1,2 Cm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-15-25-54.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-15-25-54.jpg",
     inStock: true,
   },
   {
@@ -1847,7 +1847,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1, 2 Cm De Diámetro",
     description: "Peso: 1 Grs. Medida: 1, 2 Cm De Diámetro.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-15-26-03-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-15-26-03-1.jpg",
     inStock: true,
   },
   {
@@ -1859,7 +1859,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 0,8 Grs. Medida: 1 Cm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-15-26-04.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-15-26-04.jpg",
     inStock: true,
   },
   {
@@ -1871,7 +1871,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm de Diámetro",
     description: "Peso: 0.6 Grs. Medida: 1 Cm de Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-9828DB77-E160-4872-AAD0-24E9C9FA28F5-1.jpeg",
+    image: "/assets/product_images/original-9828DB77-E160-4872-AAD0-24E9C9FA28F5-1.jpeg",
     inStock: true,
   },
   {
@@ -1883,7 +1883,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 2.2 Grs. Medida: 1 Cm De Diámetro.",
     price: 452.559935,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/PHOTO-2025-12-26-14-32-05-5.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-26-14-32-05-5.jpg",
     inStock: true,
   },
   {
@@ -1895,7 +1895,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7 Mm De Diámetro",
     description: "Peso: 0.5 Grs. Medida: 7 Mm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-46-6.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-46-6.jpg",
     inStock: true,
   },
   {
@@ -1907,7 +1907,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2 Cm de Diámetro/4 Cm de Alto",
     description: "Peso: 15.6 Grs. Medida: 2 Cm de Diámetro/4 Cm de Alto.",
     price: 3209.061357,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/PHOTO-2025-12-26-14-32-05.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-26-14-32-05.jpg",
     inStock: true,
   },
   {
@@ -1919,7 +1919,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 12 Mm De Diámetro",
     description: "Peso: 0.6 Grs. Medida: 12 Mm De Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-45.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-45.jpg",
     inStock: true,
   },
   {
@@ -1931,7 +1931,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 0.9 Grs. Medida: 1 Cm De Diámetro.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-FE467665-3B5B-499C-8ACA-94FADC0DE063.jpeg",
+    image: "/assets/product_images/original-FE467665-3B5B-499C-8ACA-94FADC0DE063.jpeg",
     inStock: true,
   },
   {
@@ -1943,7 +1943,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.5 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-1881CC61-3FC9-40EE-A71F-B96D018F09E1.jpeg",
+    image: "/assets/product_images/original-1881CC61-3FC9-40EE-A71F-B96D018F09E1.jpeg",
     inStock: true,
   },
   {
@@ -1955,7 +1955,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2,5 Cm De Alto",
     description: "Peso: 4 Grs. Medida: 2,5 Cm De Alto.",
     price: 822.836245,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/PHOTO-2025-12-26-14-32-05-6.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-26-14-32-05-6.jpg",
     inStock: true,
   },
   {
@@ -1967,7 +1967,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,5 Cm De Diámetro",
     description: "Peso: 1 Grs. Medida: 1,5 Cm De Diámetro.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-16-04-26-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-16-04-26-1.jpg",
     inStock: true,
   },
   {
@@ -1979,7 +1979,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 15 Mm de Alto",
     description: "Peso: 0,6 Grs. Medida: 15 Mm de Alto.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-01-29-20-37-48-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-29-20-37-48-1.jpg",
     inStock: true,
   },
   {
@@ -1991,7 +1991,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,6 Cm de Diámetro",
     description: "Peso: 1.7 Grs. Medida: 1,6 Cm de Diámetro.",
     price: 349.705404,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-093D097E-0880-4156-B401-BE82872E4DF5-2.jpeg",
+    image: "/assets/product_images/original-093D097E-0880-4156-B401-BE82872E4DF5-2.jpeg",
     inStock: true,
   },
   {
@@ -2003,7 +2003,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2.3 Cm de Diametro / 3.3 Cm de Alto",
     description: "Peso: 11.6 Grs. Medida: 2.3 Cm de Diametro / 3.3 Cm de Alto.",
     price: 2386.225112,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-A282A09E-4774-41C7-82D9-F1CAA68B905F-1.jpeg",
+    image: "/assets/product_images/original-A282A09E-4774-41C7-82D9-F1CAA68B905F-1.jpeg",
     inStock: true,
   },
   {
@@ -2015,7 +2015,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 1.4 Grs. Medida: 1 Cm De Diámetro.",
     price: 287.992686,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-B2091EBC-97A8-4112-90FF-DD2E90E5CDCB.jpeg",
+    image: "/assets/product_images/original-B2091EBC-97A8-4112-90FF-DD2E90E5CDCB.jpeg",
     inStock: true,
   },
   {
@@ -2027,7 +2027,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 1.1 Grs. Medida: 1 Cm De Diámetro.",
     price: 226.279967,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-4AEABB43-24EE-4FE8-BE78-A2760CDDA8E3.jpeg",
+    image: "/assets/product_images/original-4AEABB43-24EE-4FE8-BE78-A2760CDDA8E3.jpeg",
     inStock: true,
   },
   {
@@ -2039,7 +2039,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 1.4 Grs. Medida: 1 Cm De Diámetro.",
     price: 287.992686,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-9C9E45B9-9E5E-4B66-B186-7D566CBA49BF-1.jpeg",
+    image: "/assets/product_images/original-9C9E45B9-9E5E-4B66-B186-7D566CBA49BF-1.jpeg",
     inStock: true,
   },
   {
@@ -2051,7 +2051,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2 Cm De Diámetro",
     description: "Peso: 4.4 Grs. Medida: 2 Cm De Diámetro.",
     price: 905.119870,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-1A28CF06-661E-4ACF-8BC0-0C7FA463E0A5.jpeg",
+    image: "/assets/product_images/original-1A28CF06-661E-4ACF-8BC0-0C7FA463E0A5.jpeg",
     inStock: true,
   },
   {
@@ -2063,7 +2063,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,5 Cm De Diámetro",
     description: "Peso: 2.6 Grs. Medida: 1,5 Cm De Diámetro.",
     price: 534.843560,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-16-04-26.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-16-04-26.jpg",
     inStock: true,
   },
   {
@@ -2075,7 +2075,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0,3 Grs.",
     price: 159.995937,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/original-179101BD-AF2D-4AD4-9ED9-CE6A3D27BC1B.jpeg",
+    image: "/assets/product_images/original-179101BD-AF2D-4AD4-9ED9-CE6A3D27BC1B.jpeg",
     inStock: true,
   },
   {
@@ -2087,7 +2087,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,5 Cm De Diámetro",
     description: "Peso: 1 Grs. Medida: 1,5 Cm De Diámetro.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-E13D442A-EF0D-43E0-AEA0-5F0E1F427B21.jpeg",
+    image: "/assets/product_images/original-E13D442A-EF0D-43E0-AEA0-5F0E1F427B21.jpeg",
     inStock: true,
   },
   {
@@ -2099,7 +2099,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 12 Mm de Diámetro",
     description: "Peso: 1.8 Grs. Medida: 12 Mm de Diámetro.",
     price: 370.276310,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-15DDACC9-3046-4D51-9F53-58FF332A63EB.jpeg",
+    image: "/assets/product_images/original-15DDACC9-3046-4D51-9F53-58FF332A63EB.jpeg",
     inStock: true,
   },
   {
@@ -2111,7 +2111,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm de diámetro",
     description: "Peso: 1,3 Grs. Medida: 1 Cm de diámetro.",
     price: 267.421780,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/09/original-4973E395-9BC8-45B3-8DC1-51E47E1EC535.jpeg",
+    image: "/assets/product_images/original-4973E395-9BC8-45B3-8DC1-51E47E1EC535.jpeg",
     inStock: true,
   },
   {
@@ -2123,7 +2123,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm de Diámetro",
     description: "Peso: 1.3 Grs. Medida: 1 Cm de Diámetro.",
     price: 267.421780,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-60CF6C0A-43CF-4C92-845B-72D9F321B004.jpeg",
+    image: "/assets/product_images/original-60CF6C0A-43CF-4C92-845B-72D9F321B004.jpeg",
     inStock: true,
   },
   {
@@ -2135,7 +2135,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm De Diámetro",
     description: "Peso: 1.5 Grs. Medida: 1 Cm De Diámetro.",
     price: 308.563592,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-12-16-04-26-2.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-12-16-04-26-2.jpg",
     inStock: true,
   },
   {
@@ -2147,7 +2147,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,2 Cm De Diámetro",
     description: "Peso: 0.9 Grs. Medida: 1,2 Cm De Diámetro.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-027D9247-C362-4523-9FD8-E41D2919B035.jpeg",
+    image: "/assets/product_images/original-027D9247-C362-4523-9FD8-E41D2919B035.jpeg",
     inStock: true,
   },
   {
@@ -2159,7 +2159,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 17,5 Cm",
     description: "Peso: 3.3 Grs. Medida: 17,5 Cm.",
     price: 678.839902,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-3A071925-D4E1-42FE-90BC-FA238492E679.jpeg",
+    image: "/assets/product_images/original-3A071925-D4E1-42FE-90BC-FA238492E679.jpeg",
     inStock: true,
   },
   {
@@ -2171,7 +2171,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 4 Mm/19 Cm",
     description: "Peso: 3.8 Grs. Medida: 4 Mm/19 Cm.",
     price: 781.694433,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/PHOTO-2026-04-14-16-24-01.jpg",
+    image: "/assets/product_images/PHOTO-2026-04-14-16-24-01.jpg",
     inStock: true,
   },
   {
@@ -2183,7 +2183,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm Diámetro",
     description: "Peso: 0,7 Grs. Medida: 1 Cm Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-9646C9A9-4DED-445C-966A-D37401E1DAEF-1.jpeg",
+    image: "/assets/product_images/original-9646C9A9-4DED-445C-966A-D37401E1DAEF-1.jpeg",
     inStock: true,
   },
   {
@@ -2195,7 +2195,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.6 Grs.",
     price: 329.134498,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/11/PHOTO-2025-12-23-17-51-42-7.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-23-17-51-42-7.jpg",
     inStock: true,
   },
   {
@@ -2207,7 +2207,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 23 Cm/2 Mm",
     description: "Peso: 5.5 Grs. Medida: 23 Cm/2 Mm.",
     price: 1131.399837,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-10-12-30-31.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-10-12-30-31.jpg",
     inStock: true,
   },
   {
@@ -2219,7 +2219,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 18,5 Mm",
     description: "Peso: 1.3 Grs. Medida: 18,5 Mm.",
     price: 267.421780,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/PHOTO-2026-04-14-16-24-01-2.jpg",
+    image: "/assets/product_images/PHOTO-2026-04-14-16-24-01-2.jpg",
     inStock: true,
   },
   {
@@ -2231,7 +2231,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2,5 Cm de Alto",
     description: "Peso: 4.2 Grs. Medida: 2,5 Cm de Alto.",
     price: 863.978058,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-17D345B9-7877-4442-B1F0-54DF087FCC5B.jpeg",
+    image: "/assets/product_images/original-17D345B9-7877-4442-B1F0-54DF087FCC5B.jpeg",
     inStock: true,
   },
   {
@@ -2243,7 +2243,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 19 Cm De Diámetro",
     description: "Peso: 7.5 Grs. Medida: 19 Cm De Diámetro.",
     price: 1542.817960,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/original-95117A7D-B643-44CD-AC46-1037F7001226.jpeg",
+    image: "/assets/product_images/original-95117A7D-B643-44CD-AC46-1037F7001226.jpeg",
     inStock: true,
   },
   {
@@ -2255,7 +2255,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 20 Cm/2 Mm",
     description: "Peso: 2.5 Grs. Medida: 20 Cm/2 Mm.",
     price: 514.272653,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/PHOTO-2026-04-14-16-23-59-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-04-14-16-23-59-1.jpg",
     inStock: true,
   },
   {
@@ -2267,7 +2267,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2 Mm/20,5 Cm",
     description: "Peso: 2.8 Grs. Medida: 2 Mm/20,5 Cm.",
     price: 575.985372,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/PHOTO-2026-04-14-16-24-00-4.jpg",
+    image: "/assets/product_images/PHOTO-2026-04-14-16-24-00-4.jpg",
     inStock: true,
   },
   {
@@ -2279,7 +2279,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 15 Mm de Diámetro / 2 Cm de Alto",
     description: "Peso: 2 Grs. Medida: 15 Mm de Diámetro / 2 Cm de Alto.",
     price: 411.418123,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-8E2BCA01-37EA-41ED-A00A-298BAE8031A8-1.jpeg",
+    image: "/assets/product_images/original-8E2BCA01-37EA-41ED-A00A-298BAE8031A8-1.jpeg",
     inStock: true,
   },
   {
@@ -2291,7 +2291,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 18,5/2 Mm",
     description: "Peso: 0.8 Grs. Medida: 18,5/2 Mm.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/PHOTO-2026-04-14-16-24-00-12.jpg",
+    image: "/assets/product_images/PHOTO-2026-04-14-16-24-00-12.jpg",
     inStock: true,
   },
   {
@@ -2303,7 +2303,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 18 Cm",
     description: "Peso: 5.6 Grs. Medida: 18 Cm.",
     price: 1151.970744,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-BDE5A8B6-05AC-447C-84BF-8660D14ABBB8.jpeg",
+    image: "/assets/product_images/original-BDE5A8B6-05AC-447C-84BF-8660D14ABBB8.jpeg",
     inStock: true,
   },
   {
@@ -2315,7 +2315,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0,9 Grs.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/PHOTO-2025-12-23-17-04-58-2.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-23-17-04-58-2.jpg",
     inStock: true,
   },
   {
@@ -2327,7 +2327,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 70 Cm/4 Mm",
     description: "Peso: 15.3 Grs. Medida: 70 Cm/4 Mm.",
     price: 3147.348639,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-5994097F-700C-4667-9228-FF4303B0A33E-2.jpeg",
+    image: "/assets/product_images/processed-5994097F-700C-4667-9228-FF4303B0A33E-2.jpeg",
     inStock: true,
   },
   {
@@ -2339,7 +2339,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 18 Cm/1 Mm",
     description: "Peso: 0.8 Grs. Medida: 18 Cm/1 Mm.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/PHOTO-2026-04-14-16-23-58-1-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-04-14-16-23-58-1-1.jpg",
     inStock: true,
   },
   {
@@ -2351,7 +2351,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 45 Cm",
     description: "Peso: 6.8 Grs. Medida: 45 Cm.",
     price: 1398.821617,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/processed-565045D7-A252-438F-96C1-559A05EE29AD-1.jpeg",
+    image: "/assets/product_images/processed-565045D7-A252-438F-96C1-559A05EE29AD-1.jpeg",
     inStock: true,
   },
   {
@@ -2363,7 +2363,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.8 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/processed-F779B588-FAAF-4E23-A768-678A5C1D4ADB.jpeg",
+    image: "/assets/product_images/processed-F779B588-FAAF-4E23-A768-678A5C1D4ADB.jpeg",
     inStock: true,
   },
   {
@@ -2375,7 +2375,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 55 Cm / 4 Mm",
     description: "Peso: 6.8 Grs. Medida: 55 Cm / 4 Mm.",
     price: 1398.821617,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/processed-77D9D2CE-792D-4E92-9DD1-D4C623FD8BAF.jpeg",
+    image: "/assets/product_images/processed-77D9D2CE-792D-4E92-9DD1-D4C623FD8BAF.jpeg",
     inStock: true,
   },
   {
@@ -2387,7 +2387,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 5",
     description: "Peso: 1.7 Grs. Medida: 5.",
     price: 349.705404,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-28DE7DB6-D2D9-4616-8B8C-19DDF4DB715B-2.jpeg",
+    image: "/assets/product_images/original-28DE7DB6-D2D9-4616-8B8C-19DDF4DB715B-2.jpeg",
     inStock: true,
   },
   {
@@ -2399,7 +2399,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 43 Cm / 3 Mm",
     description: "Peso:6.2 Grs. Medida: 43 Cm / 3 Mm.",
     price: 1275.396180,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/processed-6B6CB464-1912-42DD-B714-14EFA808F6AF.jpeg",
+    image: "/assets/product_images/processed-6B6CB464-1912-42DD-B714-14EFA808F6AF.jpeg",
     inStock: true,
   },
   {
@@ -2411,7 +2411,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 3.2 Grs.",
     price: 658.268996,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-36B97643-343D-4B1B-9DE6-E5C27E233360.jpeg",
+    image: "/assets/product_images/original-36B97643-343D-4B1B-9DE6-E5C27E233360.jpeg",
     inStock: true,
   },
   {
@@ -2423,7 +2423,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 20 Cm/1 Mm",
     description: "Peso: 0,8 Grs. Medida: 20 Cm/1 Mm.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/PHOTO-2026-04-14-16-23-58-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-04-14-16-23-58-1.jpg",
     inStock: true,
   },
   {
@@ -2435,7 +2435,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 51 Cm/3 Mm",
     description: "Peso: 2.8 Grs. Medida: 51 Cm/3 Mm.",
     price: 575.985372,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/processed-7C30E0EE-701F-4F17-BB8B-99E86D3C32DC.jpeg",
+    image: "/assets/product_images/processed-7C30E0EE-701F-4F17-BB8B-99E86D3C32DC.jpeg",
     inStock: true,
   },
   {
@@ -2447,7 +2447,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 45 Cm / 4 Mm",
     description: "Peso: 5.7 Grs. Medida: 45 Cm / 4 Mm.",
     price: 1172.541650,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/processed-81A5A7E8-D5BF-4BFF-BE9F-66815AED55FE.jpeg",
+    image: "/assets/product_images/processed-81A5A7E8-D5BF-4BFF-BE9F-66815AED55FE.jpeg",
     inStock: true,
   },
   {
@@ -2459,7 +2459,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 50 Cm/3 Mm",
     description: "Peso: 3.9 Grs. Medida: 50 Cm/3 Mm.",
     price: 802.265339,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-D01D005B-0BD9-4EF0-A7E0-2120B01A0FB9-1.jpeg",
+    image: "/assets/product_images/original-D01D005B-0BD9-4EF0-A7E0-2120B01A0FB9-1.jpeg",
     inStock: true,
   },
   {
@@ -2471,7 +2471,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 48 Cm/2 Mm",
     description: "Peso: 2.7 Grs. Medida: 48 Cm/2 Mm.",
     price: 555.414466,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-9967FA4F-2C5F-4D1F-942B-5F4BDE336499.jpeg",
+    image: "/assets/product_images/processed-9967FA4F-2C5F-4D1F-942B-5F4BDE336499.jpeg",
     inStock: true,
   },
   {
@@ -2483,7 +2483,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 58 Cm/2 Mm",
     description: "Peso: 3.9 Grs. Medida: 58 Cm/2 Mm.",
     price: 802.265339,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/processed-5A1D9E82-435F-4B9E-8EF6-F8E97C6F318D.jpeg",
+    image: "/assets/product_images/processed-5A1D9E82-435F-4B9E-8EF6-F8E97C6F318D.jpeg",
     inStock: true,
   },
   {
@@ -2495,7 +2495,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 70 Cm/4 Mm",
     description: "Peso: 12.9 Grs. Medida: 70 Cm/4 Mm.",
     price: 2653.646892,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/processed-88AF4A73-0800-4223-BF83-2FDC191A959E-1.jpeg",
+    image: "/assets/product_images/processed-88AF4A73-0800-4223-BF83-2FDC191A959E-1.jpeg",
     inStock: true,
   },
   {
@@ -2507,7 +2507,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Oro 22 K · Medida: 50 Cm/3 Mm",
     description: "Oro 22 K. Peso: 4.4 Grs. Medida: 50 Cm/3 Mm.",
     price: 1005.688744,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/processed-DB077BB5-FFF0-4554-BFC2-E2FF34A47980.jpeg",
+    image: "/assets/product_images/processed-DB077BB5-FFF0-4554-BFC2-E2FF34A47980.jpeg",
     inStock: true,
   },
   {
@@ -2519,7 +2519,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 46 Cm/1 Mm",
     description: "Peso: 1.5 Grs. Medida: 46 Cm/1 Mm.",
     price: 308.563592,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/processed-ED50E3D8-C54B-45DD-859B-0D2561234FA9.jpeg",
+    image: "/assets/product_images/processed-ED50E3D8-C54B-45DD-859B-0D2561234FA9.jpeg",
     inStock: true,
   },
   {
@@ -2531,7 +2531,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 4 Mm/59 Cm",
     description: "Peso: 3.6 Grs. Medida: 4 Mm/59 Cm.",
     price: 740.552621,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-854467D4-099F-4880-8644-4FDC6BC37BDE-1.jpeg",
+    image: "/assets/product_images/processed-854467D4-099F-4880-8644-4FDC6BC37BDE-1.jpeg",
     inStock: true,
   },
   {
@@ -2543,7 +2543,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm/3 Mm",
     description: "Peso: 6.1 Grs. Medida: 60 Cm/3 Mm.",
     price: 1254.825274,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/processed-BAB99063-113C-49CD-8803-C63CFD5DBB8B.jpeg",
+    image: "/assets/product_images/processed-BAB99063-113C-49CD-8803-C63CFD5DBB8B.jpeg",
     inStock: true,
   },
   {
@@ -2555,7 +2555,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 50 Cm/3 Mm",
     description: "Peso: 2.7 Grs. Medida: 50 Cm/3 Mm.",
     price: 555.414466,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-02-12-14-17-10-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-02-12-14-17-10-1.jpg",
     inStock: true,
   },
   {
@@ -2567,7 +2567,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 19 Cm",
     description: "Peso: 3 Grs. Medida: 19 Cm.",
     price: 617.127184,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/PHOTO-2026-01-10-11-22-44.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-10-11-22-44.jpg",
     inStock: true,
   },
   {
@@ -2579,7 +2579,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm/4Mm",
     description: "Peso: 7.9 Grs. Medida: 60 Cm/4Mm.",
     price: 1625.101585,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/processed-66A63D04-9FF3-4012-99C1-F8F2E826E2AF.jpeg",
+    image: "/assets/product_images/processed-66A63D04-9FF3-4012-99C1-F8F2E826E2AF.jpeg",
     inStock: true,
   },
   {
@@ -2591,7 +2591,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 59 Cm/2 Mm",
     description: "Peso:  2.4 Grs. Medida: 59 Cm/2 Mm.",
     price: 493.701747,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-4760F742-2E9C-4494-B990-64D3D9E7D7F8-1.jpeg",
+    image: "/assets/product_images/processed-4760F742-2E9C-4494-B990-64D3D9E7D7F8-1.jpeg",
     inStock: true,
   },
   {
@@ -2603,7 +2603,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 50 Cm/5 Mm",
     description: "Peso: 12.1 Grs. Medida: 50 Cm/5 Mm.",
     price: 2489.079642,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/processed-D54638C5-16E1-4DC3-95D4-2E29C3705D72.jpeg",
+    image: "/assets/product_images/processed-D54638C5-16E1-4DC3-95D4-2E29C3705D72.jpeg",
     inStock: true,
   },
   {
@@ -2615,7 +2615,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm/3 Mm",
     description: "Peso: 13.6 Grs. Medida: 60 Cm/3 Mm.",
     price: 2797.643234,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/processed-46626857-FC0B-40D8-8A3F-1FF93FF4F3C6-1.jpeg",
+    image: "/assets/product_images/processed-46626857-FC0B-40D8-8A3F-1FF93FF4F3C6-1.jpeg",
     inStock: true,
   },
   {
@@ -2627,7 +2627,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida:60 Cm/4Mm",
     description: "Peso: 9.4 Grs. Medida:60 Cm/4Mm.",
     price: 1933.665177,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/processed-805FA0CD-100F-4730-91B1-4DA1B1CA996A.jpeg",
+    image: "/assets/product_images/processed-805FA0CD-100F-4730-91B1-4DA1B1CA996A.jpeg",
     inStock: true,
   },
   {
@@ -2639,7 +2639,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 70 Cm/5 Mm",
     description: "Peso: 22,7 Grs. Medida: 70 Cm/5 Mm.",
     price: 4669.595693,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/07/processed-057A9FC3-A5F6-4223-B7E3-7C1D505CFF9D.jpeg",
+    image: "/assets/product_images/processed-057A9FC3-A5F6-4223-B7E3-7C1D505CFF9D.jpeg",
     inStock: true,
   },
   {
@@ -2651,7 +2651,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 50 Cm / 4 Mm",
     description: "Peso: 10 Grs. Medida: 50 Cm / 4 Mm.",
     price: 2057.090614,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/09/processed-C208182D-7E17-4125-84AF-86EA40C17092.jpeg",
+    image: "/assets/product_images/processed-C208182D-7E17-4125-84AF-86EA40C17092.jpeg",
     inStock: true,
   },
   {
@@ -2663,7 +2663,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm/1Mm",
     description: "Peso: 2 Grs. Medida: 60 Cm/1Mm.",
     price: 411.418123,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/processed-BBBE51BC-AD96-4C4C-A9F1-ED853A5A84F0.jpeg",
+    image: "/assets/product_images/processed-BBBE51BC-AD96-4C4C-A9F1-ED853A5A84F0.jpeg",
     inStock: true,
   },
   {
@@ -2675,7 +2675,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 58 Cm/3 Mm",
     description: "Peso: 6.2 Grs. Medida: 58 Cm/3 Mm.",
     price: 1275.396180,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/processed-6A248F7E-E2F5-4D29-8BB5-6B0B8E93AA97.jpeg",
+    image: "/assets/product_images/processed-6A248F7E-E2F5-4D29-8BB5-6B0B8E93AA97.jpeg",
     inStock: true,
   },
   {
@@ -2687,7 +2687,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 70 Cm/5 Mm",
     description: "Peso: 23,4 Grs. Medida: 70 Cm/5 Mm.",
     price: 4813.592036,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/07/processed-81C01491-CFC4-402C-8076-8B9516684A5A-1.jpeg",
+    image: "/assets/product_images/processed-81C01491-CFC4-402C-8076-8B9516684A5A-1.jpeg",
     inStock: true,
   },
   {
@@ -2699,7 +2699,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 50 Cm/3 Mm",
     description: "Peso: 3.5 Grs. Medida: 50 Cm/3 Mm.",
     price: 719.981715,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/processed-236E7063-CC5D-4401-BB8C-803FDFB9E13F-1.jpeg",
+    image: "/assets/product_images/processed-236E7063-CC5D-4401-BB8C-803FDFB9E13F-1.jpeg",
     inStock: true,
   },
   {
@@ -2711,7 +2711,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 58 Cm/2 Mm",
     description: "Peso: 3.6 Grs. Medida: 58 Cm/2 Mm.",
     price: 740.552621,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/processed-325FA4B7-3D41-4230-BD75-24D648857798.jpeg",
+    image: "/assets/product_images/processed-325FA4B7-3D41-4230-BD75-24D648857798.jpeg",
     inStock: true,
   },
   {
@@ -2723,7 +2723,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 46 Cm/2 Mm",
     description: "Peso: 3.1 Grs. Medida: 46 Cm/2 Mm.",
     price: 637.698090,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-2AFAE463-AE0A-48AE-801F-660939556C4A.jpeg",
+    image: "/assets/product_images/original-2AFAE463-AE0A-48AE-801F-660939556C4A.jpeg",
     inStock: true,
   },
   {
@@ -2735,7 +2735,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm/4 Mm",
     description: "Peso: 9,3 Grs. Medida: 60 Cm/4 Mm.",
     price: 1913.094271,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/processed-EBC90B3D-144F-478F-9F82-F4C71EA4B111.jpeg",
+    image: "/assets/product_images/processed-EBC90B3D-144F-478F-9F82-F4C71EA4B111.jpeg",
     inStock: true,
   },
   {
@@ -2747,7 +2747,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 45 Cm/1 Mm",
     description: "Peso: 4.3 Grs. Medida: 45 Cm/1 Mm.",
     price: 38.221252,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-9E72BC47-BDBC-4AB9-8807-4B4CE2CE9E70.jpeg",
+    image: "/assets/product_images/processed-9E72BC47-BDBC-4AB9-8807-4B4CE2CE9E70.jpeg",
     inStock: true,
   },
   {
@@ -2759,7 +2759,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 59 Cm/2 Mm",
     description: "Peso: 3.5 Grs. Medida: 59 Cm/2 Mm.",
     price: 719.981715,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-DD132193-726B-4A3E-9059-52B18AB716FE-2.jpeg",
+    image: "/assets/product_images/processed-DD132193-726B-4A3E-9059-52B18AB716FE-2.jpeg",
     inStock: true,
   },
   {
@@ -2771,7 +2771,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm/3 Mm",
     description: "Peso: 3.3 Grs. Medida: 60 Cm/3 Mm.",
     price: 678.839902,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-04232A98-23F7-47AD-B535-1D56AE56E5BD-2.jpeg",
+    image: "/assets/product_images/processed-04232A98-23F7-47AD-B535-1D56AE56E5BD-2.jpeg",
     inStock: true,
   },
   {
@@ -2783,7 +2783,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 50 Cm/2 Cm",
     description: "Peso: 2.6 Grs. Medida: 50 Cm/2 Cm.",
     price: 534.843560,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-FB0FC146-0813-42DB-9605-28DF4F2202CA.jpeg",
+    image: "/assets/product_images/original-FB0FC146-0813-42DB-9605-28DF4F2202CA.jpeg",
     inStock: true,
   },
   {
@@ -2795,7 +2795,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm/4Mm",
     description: "Peso: 10.4 Grs. Medida: 60 Cm/4Mm.",
     price: 2139.374238,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/processed-5AF1F82D-6A53-460A-9C7D-EF0BB09A4910.jpeg",
+    image: "/assets/product_images/processed-5AF1F82D-6A53-460A-9C7D-EF0BB09A4910.jpeg",
     inStock: true,
   },
   {
@@ -2807,7 +2807,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 45 Cm/2 Mm",
     description: "Peso: 2.3 Grs. Medida: 45 Cm/2 Mm.",
     price: 473.130841,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/07/processed-BC9B7BEA-D87C-41BE-BF4D-3C6A9F2C875E.jpeg",
+    image: "/assets/product_images/processed-BC9B7BEA-D87C-41BE-BF4D-3C6A9F2C875E.jpeg",
     inStock: true,
   },
   {
@@ -2819,7 +2819,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 50 Cm / 4 Mm",
     description: "Peso: 7.5 Grs. Medida: 50 Cm / 4 Mm.",
     price: 1542.817960,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/09/processed-D6823E0C-C19E-472F-B992-C3D0CDF442CD.jpeg",
+    image: "/assets/product_images/processed-D6823E0C-C19E-472F-B992-C3D0CDF442CD.jpeg",
     inStock: true,
   },
   {
@@ -2831,7 +2831,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm/5 Mm",
     description: "Peso: 20.9 Grs. Medida: 60 Cm/5 Mm.",
     price: 4299.319382,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-96F738CD-6CE9-4C34-A632-CF28F3837068.jpeg",
+    image: "/assets/product_images/processed-96F738CD-6CE9-4C34-A632-CF28F3837068.jpeg",
     inStock: true,
   },
   {
@@ -2843,7 +2843,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm/ 2Mm",
     description: "Peso: 12.7 Grs. Medida: 60 Cm/ 2Mm.",
     price: 2612.505079,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/03/processed-033C2150-3627-4698-8502-7E73A7977C5F.jpeg",
+    image: "/assets/product_images/processed-033C2150-3627-4698-8502-7E73A7977C5F.jpeg",
     inStock: true,
   },
   {
@@ -2855,7 +2855,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2 Mm/60 Cm",
     description: "Peso: 3.4 Grs. Medida: 2 Mm/60 Cm.",
     price: 699.410809,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-A034A800-B4EF-44E5-BC0B-78B0A472602C-3.jpeg",
+    image: "/assets/product_images/processed-A034A800-B4EF-44E5-BC0B-78B0A472602C-3.jpeg",
     inStock: true,
   },
   {
@@ -2867,7 +2867,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm/3 Mm",
     description: "Peso: 6.9 Grs. Medida: 60 Cm/3 Mm.",
     price: 1419.392523,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/processed-A9B4F90A-439F-4DD8-8628-FFDA734D9181.jpeg",
+    image: "/assets/product_images/processed-A9B4F90A-439F-4DD8-8628-FFDA734D9181.jpeg",
     inStock: true,
   },
   {
@@ -2879,7 +2879,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 5 Mm/59 Cm",
     description: "Peso: 4.4 Grs. Medida: 5 Mm/59 Cm.",
     price: 905.119870,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-D5540ACC-E680-41F0-9DA4-9B8234EDC670-1.jpeg",
+    image: "/assets/product_images/processed-D5540ACC-E680-41F0-9DA4-9B8234EDC670-1.jpeg",
     inStock: true,
   },
   {
@@ -2891,7 +2891,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 70 Cm/5 Mm",
     description: "Peso: 38 Grs. Medida: 70 Cm/5 Mm.",
     price: 7816.944332,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/07/processed-D0C78E7A-CFA3-4215-9E86-5886CF50F2AD.jpeg",
+    image: "/assets/product_images/processed-D0C78E7A-CFA3-4215-9E86-5886CF50F2AD.jpeg",
     inStock: true,
   },
   {
@@ -2903,7 +2903,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 48 Cm/2 Mm",
     description: "Peso: 1.7 Grs. Medida: 48 Cm/2 Mm.",
     price: 349.705404,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-EDD6FC23-10E7-4D16-9E31-9CD822382664.jpeg",
+    image: "/assets/product_images/processed-EDD6FC23-10E7-4D16-9E31-9CD822382664.jpeg",
     inStock: true,
   },
   {
@@ -2915,7 +2915,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm / 1 Mm",
     description: "Peso: 2.4 Grs. Medida: 60 Cm / 1 Mm.",
     price: 493.701747,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/09/processed-275F9DFE-7B73-4342-813A-A8D6C211B2ED.jpeg",
+    image: "/assets/product_images/processed-275F9DFE-7B73-4342-813A-A8D6C211B2ED.jpeg",
     inStock: true,
   },
   {
@@ -2927,7 +2927,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 50 Cm / 2 Mm",
     description: "Peso: 1.9 Grs. Medida: 50 Cm / 2 Mm.",
     price: 390.847217,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/processed-54D1DCA4-B681-46CD-9765-F8C4BA729596-1.jpeg",
+    image: "/assets/product_images/processed-54D1DCA4-B681-46CD-9765-F8C4BA729596-1.jpeg",
     inStock: true,
   },
   {
@@ -2939,7 +2939,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 45 Cm/3 Mm",
     description: "Peso: 3.4 Grs. Medida: 45 Cm/3 Mm.",
     price: 30.221455,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-7E207203-12BD-4CBC-80DF-8863E63AF22A.jpeg",
+    image: "/assets/product_images/processed-7E207203-12BD-4CBC-80DF-8863E63AF22A.jpeg",
     inStock: true,
   },
   {
@@ -2951,7 +2951,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 44 Cm/2 Mm",
     description: "Peso: 3 Grs. Medida: 44 Cm/2 Mm.",
     price: 617.127184,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/02/PHOTO-2026-02-12-14-33-00-1.jpg",
+    image: "/assets/product_images/PHOTO-2026-02-12-14-33-00-1.jpg",
     inStock: true,
   },
   {
@@ -2963,7 +2963,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 49 Cm/4Mm",
     description: "Peso: 2.3 Grs. Medida: 49 Cm/4Mm.",
     price: 473.130841,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-D5324DA3-4B72-4D8A-9677-B0B7DAFC06AE-2.jpeg",
+    image: "/assets/product_images/processed-D5324DA3-4B72-4D8A-9677-B0B7DAFC06AE-2.jpeg",
     inStock: true,
   },
   {
@@ -2975,7 +2975,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 45 Cm/2 Mm",
     description: "Peso: 2.2 Grs. Medida: 45 Cm/2 Mm.",
     price: 19.555059,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-CEB218F0-1132-4A13-AAD2-76D9D072F290-1.jpeg",
+    image: "/assets/product_images/processed-CEB218F0-1132-4A13-AAD2-76D9D072F290-1.jpeg",
     inStock: true,
   },
   {
@@ -2987,7 +2987,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 3 Mm/50 Cm",
     description: "Peso: 5.5 Grs. Medida: 3 Mm/50 Cm.",
     price: 1131.399837,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/processed-53D1CF6E-0696-4BE6-BC04-B4CB642E9274.jpeg",
+    image: "/assets/product_images/processed-53D1CF6E-0696-4BE6-BC04-B4CB642E9274.jpeg",
     inStock: true,
   },
   {
@@ -2999,7 +2999,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 60 Cm/5 Mm",
     description: "Peso: 16 Grs. Medida: 60 Cm/5 Mm.",
     price: 3291.344982,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-6D0D47AE-C1F2-4414-A262-125A72A25034.jpeg",
+    image: "/assets/product_images/processed-6D0D47AE-C1F2-4414-A262-125A72A25034.jpeg",
     inStock: true,
   },
   {
@@ -3011,7 +3011,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 50 Cm/2 Mm",
     description: "Peso: 2,5 Grs. Medida: 50 Cm/2 Mm.",
     price: 514.272653,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-92A04FA4-4E74-4553-B5DE-7F5A9528C553.jpeg",
+    image: "/assets/product_images/processed-92A04FA4-4E74-4553-B5DE-7F5A9528C553.jpeg",
     inStock: true,
   },
   {
@@ -3023,7 +3023,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 44 Cm/2 Mm",
     description: "Peso: 1.4 Grs. Medida: 44 Cm/2 Mm.",
     price: 287.992686,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/05/original-8036C873-36CF-4415-AF87-8CA85A120347.jpeg",
+    image: "/assets/product_images/original-8036C873-36CF-4415-AF87-8CA85A120347.jpeg",
     inStock: true,
   },
   {
@@ -3035,7 +3035,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm de Diámetro",
     description: "Peso: 0.8 Grs. Medida: 1 Cm de Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-A9141837-7C2C-4A66-AFE9-FDEA6A80E99F-1.jpeg",
+    image: "/assets/product_images/original-A9141837-7C2C-4A66-AFE9-FDEA6A80E99F-1.jpeg",
     inStock: true,
   },
   {
@@ -3047,7 +3047,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 48 Cm/2 Mm",
     description: "Peso: 2.4 Grs. Medida: 48 Cm/2 Mm.",
     price: 493.701747,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-71DBF068-75E7-46BB-93F7-4B217B709A60-1.jpeg",
+    image: "/assets/product_images/processed-71DBF068-75E7-46BB-93F7-4B217B709A60-1.jpeg",
     inStock: true,
   },
   {
@@ -3059,7 +3059,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 40 Cm/1 Mm",
     description: "Peso: 1.8 Grs. Medida: 40 Cm/1 Mm.",
     price: 15.999594,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/processed-025FE017-D93A-4DA5-AB7A-AA7389D235F8-1.jpeg",
+    image: "/assets/product_images/processed-025FE017-D93A-4DA5-AB7A-AA7389D235F8-1.jpeg",
     inStock: true,
   },
   {
@@ -3071,7 +3071,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 59 Cm/2 Mm",
     description: "Peso: 1.3 Grs. Medida: 59 Cm/2 Mm.",
     price: 267.421780,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/04/processed-A32344AB-C5D3-442F-B0DE-88ED65F08E48.jpeg",
+    image: "/assets/product_images/processed-A32344AB-C5D3-442F-B0DE-88ED65F08E48.jpeg",
     inStock: true,
   },
   {
@@ -3083,7 +3083,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 18 Cm",
     description: "Peso: 2.3 Grs. Medida: 18 Cm.",
     price: 473.130841,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-E2AF12B9-C461-431B-BD28-CB6639E98F8E-1.jpeg",
+    image: "/assets/product_images/original-E2AF12B9-C461-431B-BD28-CB6639E98F8E-1.jpeg",
     inStock: true,
   },
   {
@@ -3095,7 +3095,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7,5",
     description: "Peso: 2 Grs. Medida: 7,5.",
     price: 411.418123,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-FFC1E85E-3B8E-4FA0-8E98-3F11A4B997A9.jpeg",
+    image: "/assets/product_images/original-FFC1E85E-3B8E-4FA0-8E98-3F11A4B997A9.jpeg",
     inStock: true,
   },
   {
@@ -3107,7 +3107,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm de Diámetro",
     description: "Peso: 0.8 Grs. Medida: 1 Cm de Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-8A824C17-30D8-40ED-B498-3775F76A611F-1.jpeg",
+    image: "/assets/product_images/original-8A824C17-30D8-40ED-B498-3775F76A611F-1.jpeg",
     inStock: true,
   },
   {
@@ -3119,7 +3119,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.1 Grs.",
     price: 226.279967,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2026-01-13-11-36-56.jpg",
+    image: "/assets/product_images/PHOTO-2026-01-13-11-36-56.jpg",
     inStock: true,
   },
   {
@@ -3131,7 +3131,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 42 Cm/3 Mm",
     description: "Peso: 5.5 Grs. Medida: 42 Cm/3 Mm.",
     price: 1131.399837,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/processed-1066D24D-8008-49F7-95B3-28977C844F76.jpeg",
+    image: "/assets/product_images/processed-1066D24D-8008-49F7-95B3-28977C844F76.jpeg",
     inStock: true,
   },
   {
@@ -3143,7 +3143,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 16 Mm de Diámetro",
     description: "Peso: 1.8 Grs. Medida: 16 Mm de Diámetro.",
     price: 370.276310,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-ECFE42AA-1F77-4B65-A811-36F793BE39BD.jpeg",
+    image: "/assets/product_images/original-ECFE42AA-1F77-4B65-A811-36F793BE39BD.jpeg",
     inStock: true,
   },
   {
@@ -3155,7 +3155,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medid: 55 Cm/2 Mm",
     description: "Peso: 2,9 Grs. Medid: 55 Cm/2 Mm.",
     price: 596.556278,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/07/processed-6A27F5D6-8AFC-42B1-B077-F6FBCD3DB9BB.jpeg",
+    image: "/assets/product_images/processed-6A27F5D6-8AFC-42B1-B077-F6FBCD3DB9BB.jpeg",
     inStock: true,
   },
   {
@@ -3167,7 +3167,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 2 Cm de Diámetro",
     description: "Peso: 2.1 Grs. Medida: 2 Cm de Diámetro.",
     price: 431.989029,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-2CB79A1D-C3BE-46DC-A664-21FC4A6AC1C0.jpeg",
+    image: "/assets/product_images/original-2CB79A1D-C3BE-46DC-A664-21FC4A6AC1C0.jpeg",
     inStock: true,
   },
   {
@@ -3179,7 +3179,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.5 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/11/original-E17F19DF-BA30-4E0F-9783-A8EEC00433E8-1.jpeg",
+    image: "/assets/product_images/original-E17F19DF-BA30-4E0F-9783-A8EEC00433E8-1.jpeg",
     inStock: true,
   },
   {
@@ -3191,7 +3191,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7,5",
     description: "Peso: 2 Grs. Medida: 7,5.",
     price: 411.418123,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-493F3D48-D494-4DB3-B0A2-120D96759F7B.jpeg",
+    image: "/assets/product_images/original-493F3D48-D494-4DB3-B0A2-120D96759F7B.jpeg",
     inStock: true,
   },
   {
@@ -3203,7 +3203,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.2 Grs.",
     price: 246.850874,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-A6E4B5A8-3E82-449B-B9AC-9277339DBAA0-2.jpeg",
+    image: "/assets/product_images/original-A6E4B5A8-3E82-449B-B9AC-9277339DBAA0-2.jpeg",
     inStock: true,
   },
   {
@@ -3215,7 +3215,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1 Cm de Diámetro",
     description: "Peso: 0.8 Grs. Medida: 1 Cm de Diámetro.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-30360C07-5988-44B3-A349-4417AE11FCCD-1.jpeg",
+    image: "/assets/product_images/original-30360C07-5988-44B3-A349-4417AE11FCCD-1.jpeg",
     inStock: true,
   },
   {
@@ -3227,7 +3227,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0,8 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/12/original-F29DDC23-8CFB-4002-9466-EBE4621FC1BC.jpeg",
+    image: "/assets/product_images/original-F29DDC23-8CFB-4002-9466-EBE4621FC1BC.jpeg",
     inStock: true,
   },
   {
@@ -3239,7 +3239,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 7,5",
     description: "Peso: 2 Grs. Medida: 7,5.",
     price: 411.418123,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/10/original-A98C3261-919C-43F0-93D8-C98EAB5E0EF8-1.jpeg",
+    image: "/assets/product_images/original-A98C3261-919C-43F0-93D8-C98EAB5E0EF8-1.jpeg",
     inStock: true,
   },
   {
@@ -3251,7 +3251,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.6 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/11/original-36388FC9-13FB-4D74-A28D-859A1E1E7B51.jpeg",
+    image: "/assets/product_images/original-36388FC9-13FB-4D74-A28D-859A1E1E7B51.jpeg",
     inStock: true,
   },
   {
@@ -3263,7 +3263,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 2.5 Grs.",
     price: 514.272653,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-5CF8F47D-4954-419C-BB91-A212A4552F7C.jpeg",
+    image: "/assets/product_images/original-5CF8F47D-4954-419C-BB91-A212A4552F7C.jpeg",
     inStock: true,
   },
   {
@@ -3275,7 +3275,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0.6 Grs.",
     price: 182.852499,
-    image: "https://kilates.com.ve/wp-content/uploads/2025/11/original-5CF3659A-BBEA-4905-A37B-B9395C2CFCDF.jpeg",
+    image: "/assets/product_images/original-5CF3659A-BBEA-4905-A37B-B9395C2CFCDF.jpeg",
     inStock: true,
   },
   {
@@ -3287,7 +3287,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "Medida: 1,5 Cm De Diámetro",
     description: "Peso: 2.1 Grs. Medida: 1,5 Cm De Diámetro.",
     price: 431.989029,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/07/original-8D1D0858-DA49-47B2-A33B-9FAAF29055E6.jpeg",
+    image: "/assets/product_images/original-8D1D0858-DA49-47B2-A33B-9FAAF29055E6.jpeg",
     inStock: true,
   },
   {
@@ -3299,7 +3299,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 0,4 Grs.",
     price: 159.995937,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-2690BADE-69B7-4DE9-B2B5-D420968D866E-1.jpeg",
+    image: "/assets/product_images/original-2690BADE-69B7-4DE9-B2B5-D420968D866E-1.jpeg",
     inStock: true,
   },
   {
@@ -3311,7 +3311,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso:  3.9 Grs.",
     price: 802.265339,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-55C987BE-554C-4701-95A9-4538174A384D-1.jpeg",
+    image: "/assets/product_images/original-55C987BE-554C-4701-95A9-4538174A384D-1.jpeg",
     inStock: true,
   },
   {
@@ -3323,7 +3323,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.4 Grs.",
     price: 287.992686,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2025-12-26-15-09-56-2.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-26-15-09-56-2.jpg",
     inStock: true,
   },
   {
@@ -3335,7 +3335,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.5 Grs.",
     price: 308.563592,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2025-12-26-15-09-55.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-26-15-09-55.jpg",
     inStock: true,
   },
   {
@@ -3347,7 +3347,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.7 Grs.",
     price: 349.705404,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-4DF421C0-CEBE-4CE1-B6D6-B962EEBED2E8-1.jpeg",
+    image: "/assets/product_images/original-4DF421C0-CEBE-4CE1-B6D6-B962EEBED2E8-1.jpeg",
     inStock: true,
   },
   {
@@ -3359,7 +3359,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1 Grs.",
     price: 205.709061,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/original-B30C180B-043A-47DC-BAC5-F8504F8BFF64-1.jpeg",
+    image: "/assets/product_images/original-B30C180B-043A-47DC-BAC5-F8504F8BFF64-1.jpeg",
     inStock: true,
   },
   {
@@ -3371,7 +3371,7 @@ export const REAL_PRODUCTS: Product[] = [
     detail: "",
     description: "Peso: 1.3 Grs.",
     price: 267.421780,
-    image: "https://kilates.com.ve/wp-content/uploads/2026/01/PHOTO-2025-12-26-15-09-56-1.jpg",
+    image: "/assets/product_images/PHOTO-2025-12-26-15-09-56-1.jpg",
     inStock: true,
   },
 ];
