@@ -151,38 +151,101 @@ export function ProductsPanel({
       </div>
 
       <div className="mt-6 divide-y divide-border border border-border">
-        {items.map((p) => (
-          <div key={p.id} className="flex items-center gap-4 p-3">
-            <img
-              src={p.image}
-              alt={p.name}
-              loading="lazy"
-              className="size-14 shrink-0 border border-border object-cover"
-            />
-            <div className="min-w-0 flex-1">
-              <p className="truncate text-sm">{p.name}</p>
-              <p className="text-xs text-muted-foreground">
-                {p.category} · US$ {p.price.toFixed(2)} · Bs{" "}
-                {Math.round(p.price * rate).toLocaleString("es-VE")}
-                {!p.inStock && " · agotado"}
-              </p>
+        {items.map((p) => {
+          const expanded = expandedId === p.id;
+          const metal = metalOf(p.material);
+          return (
+            <div key={p.id} className="divide-y divide-border">
+              <div
+                onClick={() => setExpandedId(expanded ? null : p.id)}
+                className="flex cursor-pointer items-center gap-4 p-3 transition-colors hover:bg-muted/30"
+              >
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  loading="lazy"
+                  className="size-14 shrink-0 border border-border object-cover"
+                />
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-sm">{p.name}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {p.category} · US$ {p.price.toFixed(2)} · Bs{" "}
+                    {Math.round(p.price * rate).toLocaleString("es-VE")}
+                    {!p.inStock && " · agotado"}
+                  </p>
+                </div>
+                <GhostButton
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setManualPrice(
+                      Math.abs(
+                        p.price -
+                          p.weight * ratePerGram(metal, settings),
+                      ) > 0.01,
+                    );
+                    setDraft({ ...p });
+                  }}
+                >
+                  Editar
+                </GhostButton>
+                <GhostButton
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    void remove(p.id);
+                  }}
+                >
+                  Eliminar
+                </GhostButton>
+              </div>
+
+              {expanded && (
+                <div className="grid gap-4 bg-muted/10 p-4 sm:grid-cols-[160px_1fr]">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    loading="lazy"
+                    className="aspect-square w-full border border-border object-cover"
+                  />
+                  <div className="space-y-2 text-sm">
+                    <p>
+                      <span className="text-muted-foreground">Material:</span>{" "}
+                      {metal}
+                    </p>
+                    <p>
+                      <span className="text-muted-foreground">Peso:</span>{" "}
+                      {p.weight} g
+                    </p>
+                    <p>
+                      <span className="text-muted-foreground">Precio USD:</span>{" "}
+                      US$ {p.price.toFixed(2)}
+                    </p>
+                    <p>
+                      <span className="text-muted-foreground">Precio Bs:</span>{" "}
+                      Bs {Math.round(p.price * rate).toLocaleString("es-VE")}
+                    </p>
+                    <p>
+                      <span className="text-muted-foreground">Disponible:</span>{" "}
+                      {p.inStock ? "Sí" : "No"}
+                    </p>
+                    <p>
+                      <span className="text-muted-foreground">Novedad:</span>{" "}
+                      {p.isNew ? "Sí" : "No"}
+                    </p>
+                    {p.detail && (
+                      <p>
+                        <span className="text-muted-foreground">Detalle:</span>{" "}
+                        {p.detail}
+                      </p>
+                    )}
+                    {p.description && (
+                      <p className="text-muted-foreground">{p.description}</p>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
-            <GhostButton
-              onClick={() => {
-                setManualPrice(
-                  Math.abs(
-                    p.price -
-                      p.weight * ratePerGram(metalOf(p.material), settings),
-                  ) > 0.01,
-                );
-                setDraft({ ...p });
-              }}
-            >
-              Editar
-            </GhostButton>
-            <GhostButton onClick={() => void remove(p.id)}>Eliminar</GhostButton>
-          </div>
-        ))}
+          );
+        })}
         {items.length === 0 && (
           <p className="p-6 text-center text-sm text-muted-foreground">
             Sin resultados.
