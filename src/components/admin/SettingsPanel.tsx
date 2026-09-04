@@ -26,7 +26,6 @@ export function SettingsPanel({
       address: form.address,
       hours: form.hours,
       instagram: form.instagram,
-      usd_rate: form.usdRate,
     });
     setSaving(false);
     if (error) {
@@ -99,15 +98,10 @@ export function SettingsPanel({
           className={inputClass}
         />
       </Field>
-      <Field label="Tasa Bs por US$">
-        <input
-          type="number"
-          step="0.01"
-          value={form.usdRate}
-          onChange={(e) => set({ usdRate: Number(e.target.value) })}
-          className={inputClass}
-        />
-      </Field>
+      <p className="text-xs text-muted-foreground">
+        Las tasas de oro, plata, dólar y euro se administran en la pestaña
+        «Tasas».
+      </p>
 
       <PrimaryButton disabled={saving} onClick={() => void save()}>
         {saving ? "Guardando…" : "Guardar cambios"}
