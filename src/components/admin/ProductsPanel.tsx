@@ -2,18 +2,29 @@ import { useMemo, useState } from "react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Field, GhostButton, ImageInput, PrimaryButton, inputClass } from "./ui";
-import type { Category, Product } from "@/lib/catalog";
+import type { Category, Product, SiteSettings } from "@/lib/catalog";
 
 const PAGE_SIZE = 20;
 
 type Draft = Product & { sortOrder?: number };
+
+export type Metal = "Oro" | "Plata";
+
+/** Los productos guardan el material como texto libre; aquí se reduce a Oro o Plata. */
+function metalOf(material: string): Metal {
+  return material.toLowerCase().includes("plata") ? "Plata" : "Oro";
+}
+
+function ratePerGram(metal: Metal, settings: SiteSettings) {
+  return metal === "Plata" ? settings.silverRate : settings.goldRate;
+}
 
 function emptyDraft(categoryId: string): Draft {
   return {
     id: crypto.randomUUID(),
     name: "",
     category: categoryId,
-    material: "Oro 18k",
+    material: "Oro",
     weight: 0,
     detail: "",
     description: "",
@@ -27,19 +38,21 @@ function emptyDraft(categoryId: string): Draft {
 export function ProductsPanel({
   products,
   categories,
-  rate,
+  settings,
   onRefresh,
 }: {
   products: Product[];
   categories: Category[];
-  rate: number;
+  settings: SiteSettings;
   onRefresh: () => Promise<void> | void;
 }) {
+  const rate = settings.usdRate;
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState("todos");
   const [page, setPage] = useState(1);
   const [draft, setDraft] = useState<Draft | null>(null);
   const [saving, setSaving] = useState(false);
+  const [manualPrice, setManualPrice] = useState(false);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -65,7 +78,7 @@ export function ProductsPanel({
       id: draft.id,
       name: draft.name.trim(),
       category: draft.category,
-      material: draft.material,
+      material: metalOf(draft.material),
       weight: draft.weight,
       detail: draft.detail,
       description: draft.description,
@@ -127,7 +140,10 @@ export function ProductsPanel({
         </span>
         <PrimaryButton
           className="ml-auto"
-          onClick={() => setDraft(emptyDraft(categories[0]?.id ?? "anillos"))}
+          onClick={() => {
+            setManualPrice(false);
+            setDraft(emptyDraft(categories[0]?.id ?? "anillos"));
+          }}
         >
           Nuevo producto
         </PrimaryButton>
@@ -150,7 +166,19 @@ export function ProductsPanel({
                 {!p.inStock && " · agotado"}
               </p>
             </div>
-            <GhostButton onClick={() => setDraft({ ...p })}>Editar</GhostButton>
+            <GhostButton
+              onClick={() => {
+                setManualPrice(
+                  Math.abs(
+                    p.price -
+                      p.weight * ratePerGram(metalOf(p.material), settings),
+                  ) > 0.01,
+                );
+                setDraft({ ...p });
+              }}
+            >
+              Editar
+            </GhostButton>
             <GhostButton onClick={() => void remove(p.id)}>Eliminar</GhostButton>
           </div>
         ))}
@@ -208,20 +236,39 @@ export function ProductsPanel({
                 </select>
               </Field>
               <Field label="Material">
-                <input
-                  value={draft.material}
-                  onChange={(e) => setDraft({ ...draft, material: e.target.value })}
+                <select
+                  value={metalOf(draft.material)}
+                  onChange={(e) => {
+                    const metal = e.target.value as Metal;
+                    setDraft({
+                      ...draft,
+                      material: metal,
+                      price: manualPrice
+                        ? draft.price
+                        : draft.weight * ratePerGram(metal, settings),
+                    });
+                  }}
                   className={inputClass}
-                />
+                >
+                  <option value="Oro">Oro</option>
+                  <option value="Plata">Plata</option>
+                </select>
               </Field>
               <Field label="Peso (g)">
                 <input
                   type="number"
                   step="0.01"
                   value={draft.weight}
-                  onChange={(e) =>
-                    setDraft({ ...draft, weight: Number(e.target.value) })
-                  }
+                  onChange={(e) => {
+                    const weight = Number(e.target.value);
+                    setDraft({
+                      ...draft,
+                      weight,
+                      price: manualPrice
+                        ? draft.price
+                        : weight * ratePerGram(metalOf(draft.material), settings),
+                    });
+                  }}
                   className={inputClass}
                 />
               </Field>
@@ -229,24 +276,46 @@ export function ProductsPanel({
                 <input
                   type="number"
                   step="0.01"
-                  value={draft.price}
+                  readOnly={!manualPrice}
+                  value={Number(draft.price.toFixed(2))}
                   onChange={(e) =>
                     setDraft({ ...draft, price: Number(e.target.value) })
                   }
-                  className={inputClass}
+                  className={`${inputClass} ${manualPrice ? "" : "opacity-70"}`}
                 />
               </Field>
               <Field label="Precio en bolívares">
                 <input
                   type="number"
                   step="1"
+                  readOnly
                   value={Math.round(draft.price * rate)}
-                  onChange={(e) =>
-                    setDraft({ ...draft, price: Number(e.target.value) / rate })
-                  }
-                  className={inputClass}
+                  className={`${inputClass} opacity-70`}
                 />
               </Field>
+              <div className="md:col-span-2 -mt-2 text-xs text-muted-foreground">
+                {metalOf(draft.material)} · {draft.weight || 0} g ×{" "}
+                US$ {ratePerGram(metalOf(draft.material), settings).toFixed(2)} por
+                gramo · tasa Bs {rate.toLocaleString("es-VE")} por US$
+                <label className="mt-2 flex items-center gap-2 uppercase">
+                  <input
+                    type="checkbox"
+                    checked={manualPrice}
+                    onChange={(e) => {
+                      setManualPrice(e.target.checked);
+                      if (!e.target.checked) {
+                        setDraft({
+                          ...draft,
+                          price:
+                            draft.weight *
+                            ratePerGram(metalOf(draft.material), settings),
+                        });
+                      }
+                    }}
+                  />
+                  Fijar precio manualmente
+                </label>
+              </div>
               <Field label="Detalle corto">
                 <input
                   value={draft.detail}

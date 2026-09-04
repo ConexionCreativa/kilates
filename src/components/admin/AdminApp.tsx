@@ -6,14 +6,16 @@ import { AdminLogin } from "./AdminLogin";
 import { ProductsPanel } from "./ProductsPanel";
 import { CategoriesPanel } from "./CategoriesPanel";
 import { SettingsPanel } from "./SettingsPanel";
+import { RatesPanel } from "./RatesPanel";
 import { GhostButton } from "./ui";
 import logo from "@/assets/realgestion-logo.png.asset.json";
 
-type Tab = "productos" | "colecciones" | "contacto";
+type Tab = "productos" | "colecciones" | "tasas" | "contacto";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "productos", label: "Productos y precios" },
   { id: "colecciones", label: "Categorías / Colecciones" },
+  { id: "tasas", label: "Tasas" },
   { id: "contacto", label: "Datos de contacto" },
 ];
 
@@ -124,12 +126,19 @@ export function AdminApp() {
           <ProductsPanel
             products={catalog.products}
             categories={catalog.categories}
-            rate={catalog.settings.usdRate}
+            settings={catalog.settings}
             onRefresh={refresh}
           />
         )}
         {tab === "colecciones" && (
           <CategoriesPanel categories={catalog.categories} onRefresh={refresh} />
+        )}
+        {tab === "tasas" && (
+          <RatesPanel
+            key={`${catalog.settings.goldRate}-${catalog.settings.silverRate}-${catalog.settings.usdRate}-${catalog.settings.eurRate}`}
+            settings={catalog.settings}
+            onRefresh={refresh}
+          />
         )}
         {tab === "contacto" && (
           <SettingsPanel

@@ -103,11 +103,15 @@ export type Database = {
       site_settings: {
         Row: {
           address: string
+          eur_rate: number
+          gold_rate: number
           hours: string
           id: number
           instagram: string
           name: string
           phone: string
+          rates_updated_at: string
+          silver_rate: number
           tagline: string
           updated_at: string
           usd_rate: number
@@ -116,11 +120,15 @@ export type Database = {
         }
         Insert: {
           address?: string
+          eur_rate?: number
+          gold_rate?: number
           hours?: string
           id?: number
           instagram?: string
           name?: string
           phone?: string
+          rates_updated_at?: string
+          silver_rate?: number
           tagline?: string
           updated_at?: string
           usd_rate?: number
@@ -129,11 +137,15 @@ export type Database = {
         }
         Update: {
           address?: string
+          eur_rate?: number
+          gold_rate?: number
           hours?: string
           id?: number
           instagram?: string
           name?: string
           phone?: string
+          rates_updated_at?: string
+          silver_rate?: number
           tagline?: string
           updated_at?: string
           usd_rate?: number
