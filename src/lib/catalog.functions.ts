@@ -33,6 +33,9 @@ export type SiteSettings = {
   hours: string;
   instagram: string;
   usdRate: number;
+  eurRate: number;
+  goldRate: number;
+  silverRate: number;
 };
 
 export type CatalogData = {
@@ -51,6 +54,9 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   hours: "Atención todos los días · horario completo",
   instagram: "https://instagram.com/kilates_oyerias",
   usdRate: 787.52,
+  eurRate: 0,
+  goldRate: 85,
+  silverRate: 1.5,
 };
 
 export const getCatalog = createServerFn({ method: "GET" }).handler(
@@ -111,6 +117,9 @@ export const getCatalog = createServerFn({ method: "GET" }).handler(
           hours: s.hours,
           instagram: s.instagram,
           usdRate: Number(s.usd_rate),
+          eurRate: Number(s.eur_rate ?? 0),
+          goldRate: Number(s.gold_rate ?? 0),
+          silverRate: Number(s.silver_rate ?? 0),
         }
       : DEFAULT_SETTINGS;
 
