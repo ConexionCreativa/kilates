@@ -15,6 +15,13 @@
       "when": 1788378017665,
       "tag": "0001_product_images_storage_policies",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1788537369387,
+      "tag": "0002_add_metal_rates",
+      "breakpoints": true
     }
   ]
 }
