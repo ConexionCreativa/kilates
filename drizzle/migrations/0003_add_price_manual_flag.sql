@@ -1,0 +1,2 @@
+ALTER TABLE public.products
+  ADD COLUMN IF NOT EXISTS price_manual BOOLEAN NOT NULL DEFAULT false;
