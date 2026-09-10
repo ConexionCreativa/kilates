@@ -54,6 +54,7 @@ export type Database = {
           material: string
           name: string
           price: number
+          price_manual: boolean
           sort_order: number
           updated_at: string
           weight: number
@@ -70,6 +71,7 @@ export type Database = {
           material?: string
           name: string
           price?: number
+          price_manual?: boolean
           sort_order?: number
           updated_at?: string
           weight?: number
@@ -86,6 +88,7 @@ export type Database = {
           material?: string
           name?: string
           price?: number
+          price_manual?: boolean
           sort_order?: number
           updated_at?: string
           weight?: number

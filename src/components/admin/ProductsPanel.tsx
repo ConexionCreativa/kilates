@@ -32,6 +32,7 @@ function emptyDraft(categoryId: string): Draft {
     image: "",
     inStock: true,
     isNew: false,
+    priceManual: false,
   };
 }
 
@@ -87,6 +88,7 @@ export function ProductsPanel({
       image: draft.image,
       in_stock: draft.inStock,
       is_new: draft.isNew ?? false,
+      price_manual: manualPrice,
     });
     setSaving(false);
     if (error) {
@@ -177,13 +179,13 @@ export function ProductsPanel({
                 <GhostButton
                   onClick={(e) => {
                     e.stopPropagation();
-                    setManualPrice(
-                      Math.abs(
-                        p.price -
-                          p.weight * ratePerGram(metal, settings),
-                      ) > 0.01,
-                    );
-                    setDraft({ ...p });
+                    setManualPrice(p.priceManual ?? false);
+                    setDraft({
+                      ...p,
+                      price: (p.priceManual ?? false)
+                        ? p.price
+                        : p.weight * ratePerGram(metal, settings),
+                    });
                   }}
                 >
                   Editar
