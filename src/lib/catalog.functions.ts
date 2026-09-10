@@ -119,7 +119,7 @@ export const getCatalog = createServerFn({ method: "GET" }).handler(
       supabase
         .from("products")
         .select(
-          "id, name, category, material, weight, detail, description, price, image, in_stock, is_new",
+          "id, name, category, material, weight, detail, description, price, image, in_stock, is_new, price_manual",
         )
         .order("sort_order", { ascending: true })
         .limit(2000),
