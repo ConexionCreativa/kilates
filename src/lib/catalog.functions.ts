@@ -14,6 +14,8 @@ export type Product = {
   image: string;
   inStock: boolean;
   isNew?: boolean;
+  /** true = precio escrito a mano; false = peso × tasa del metal */
+  priceManual?: boolean;
 };
 
 export type Category = {
@@ -58,6 +60,43 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   goldRate: 85,
   silverRate: 1.5,
 };
+
+/** Refresca la tasa BCV una vez al día (hora de Caracas) si está desactualizada. */
+async function refreshDailyRate(lastUpdated: string | null): Promise<number | null> {
+  const today = new Date(Date.now() - 4 * 3600 * 1000).toISOString().slice(0, 10);
+  const last = lastUpdated
+    ? new Date(new Date(lastUpdated).getTime() - 4 * 3600 * 1000)
+        .toISOString()
+        .slice(0, 10)
+    : null;
+  if (last === today) return null;
+
+  try {
+    const res = await fetch("https://ve.dolarapi.com/v1/dolares/oficial");
+    if (!res.ok) return null;
+    const json = (await res.json()) as { promedio: number };
+    const usd = Number(json.promedio);
+    if (!usd || usd <= 0) return null;
+
+    const eurRes = await fetch("https://ve.dolarapi.com/v1/euros/oficial");
+    const eur = eurRes.ok
+      ? Number(((await eurRes.json()) as { promedio: number }).promedio) || null
+      : null;
+
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    await supabaseAdmin
+      .from("site_settings")
+      .update({
+        usd_rate: usd,
+        ...(eur ? { eur_rate: eur } : {}),
+        rates_updated_at: new Date().toISOString(),
+      })
+      .eq("id", 1);
+    return usd;
+  } catch {
+    return null;
+  }
+}
 
 export const getCatalog = createServerFn({ method: "GET" }).handler(
   async (): Promise<CatalogData> => {
