@@ -130,22 +130,8 @@ export const getCatalog = createServerFn({ method: "GET" }).handler(
       supabase.from("site_settings").select("*").eq("id", 1).maybeSingle(),
     ]);
 
-    const products: Product[] = (productsRes.data ?? []).map((p) => ({
-      id: p.id,
-      name: p.name,
-      category: p.category,
-      material: p.material,
-      weight: Number(p.weight),
-      detail: p.detail,
-      description: p.description,
-      price: Number(p.price),
-      image: p.image,
-      inStock: p.in_stock,
-      isNew: p.is_new,
-    }));
-
     const s = settingsRes.data;
-    const settings: SiteSettings = s
+    let settings: SiteSettings = s
       ? {
           name: s.name,
           tagline: s.tagline,
@@ -161,6 +147,34 @@ export const getCatalog = createServerFn({ method: "GET" }).handler(
           silverRate: Number(s.silver_rate ?? 0),
         }
       : DEFAULT_SETTINGS;
+
+    if (s) {
+      const fresh = await refreshDailyRate(s.rates_updated_at ?? null);
+      if (fresh) settings = { ...settings, usdRate: fresh };
+    }
+
+    const products: Product[] = (productsRes.data ?? []).map((p) => {
+      const weight = Number(p.weight);
+      const manual = p.price_manual ?? false;
+      const metalRate = p.material.toLowerCase().includes("plata")
+        ? settings.silverRate
+        : settings.goldRate;
+      const auto = weight > 0 && metalRate > 0 ? weight * metalRate : Number(p.price);
+      return {
+        id: p.id,
+        name: p.name,
+        category: p.category,
+        material: p.material,
+        weight,
+        detail: p.detail,
+        description: p.description,
+        price: manual ? Number(p.price) : auto,
+        image: p.image,
+        inStock: p.in_stock,
+        isNew: p.is_new,
+        priceManual: manual,
+      };
+    });
 
     return { products, categories: categoriesRes.data ?? [], settings };
   },
