@@ -32,6 +32,7 @@ function emptyDraft(categoryId: string): Draft {
     image: "",
     inStock: true,
     isNew: false,
+    priceManual: false,
   };
 }
 
