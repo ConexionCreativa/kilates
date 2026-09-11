@@ -1,4 +1,4 @@
-import { BadgeCheck, ShieldCheck, Truck, CalendarClock } from "lucide-react";
+import { BadgeCheck, ShieldCheck, Truck } from "lucide-react";
 
 const ITEMS = [
   {
@@ -15,11 +15,6 @@ const ITEMS = [
     icon: Truck,
     title: "Envío asegurado",
     text: "Despacho nacional con seguro incluido y entrega en 24 a 72 horas.",
-  },
-  {
-    icon: CalendarClock,
-    title: "Apartado flexible",
-    text: "Reserve su pieza con 30% de inicial y complete el pago en 60 días.",
   },
 ];
 
