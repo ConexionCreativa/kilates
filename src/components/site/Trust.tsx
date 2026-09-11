@@ -21,7 +21,7 @@ const ITEMS = [
 export function Trust() {
   return (
     <section className="border-y border-border bg-onyx">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-16 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-16 md:grid-cols-3">
         {ITEMS.map(({ icon: Icon, title, text }) => (
           <div key={title}>
             <Icon className="size-6 text-gold" />
