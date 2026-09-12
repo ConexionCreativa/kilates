@@ -13,7 +13,7 @@ import { useCurrency } from "@/lib/currency";
 
 export function CartDrawer() {
   const { lines, total, isOpen, setOpen, setQty, remove, clear } = useCart();
-  const { format, currency, rate, rateDate } = useCurrency();
+  const { format } = useCurrency();
   const SITE = useSettings();
   const whatsappUrl = (m: string) => whatsappLink(SITE.whatsapp, m);
 
@@ -28,7 +28,8 @@ export function CartDrawer() {
     ),
     "",
     `Total estimado: ${format(total)}`,
-    ...(currency === "VES" ? [`(Tasa BCV ${rateDate}: Bs ${rate} por US$1)`] : []),
+    "",
+    "✨ Me interesa también conocer la oferta con descuento para pago en Efectivo, Zelle o USDT. ¿Me ayudan a formalizar la compra?",
   ].join("\n");
 
   return (
