@@ -95,7 +95,7 @@ export const getCatalog = createServerFn({ method: "GET" }).handler(
     ]);
 
     const s = settingsRes.data;
-    let settings: SiteSettings = s
+    const settings: SiteSettings = s
       ? {
           name: s.name,
           tagline: s.tagline,
