@@ -160,12 +160,15 @@ export function Catalog({
 
       {/* Resultados */}
       {groups.length === 0 ? (
-        <p className="py-20 text-center text-muted-foreground">
+        <p
+          id="catalogo-resultados"
+          className="scroll-mt-28 py-20 text-center text-muted-foreground"
+        >
           No encontramos piezas con esos criterios. Pruebe otra búsqueda.
         </p>
       ) : (
         <>
-          <div className="mt-14 space-y-16">
+          <div id="catalogo-resultados" className="mt-14 scroll-mt-28 space-y-16">
             {groups.map((group) => (
               <div key={group.id}>
                 <div className="flex items-baseline gap-4">
