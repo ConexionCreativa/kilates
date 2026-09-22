@@ -33,7 +33,12 @@ function Index() {
 
   function selectCategory(id: CategoryId) {
     setCategory(id);
-    document.getElementById("catalogo")?.scrollIntoView({ behavior: "smooth" });
+    // Espera a que el catálogo filtrado se renderice y baja hasta los resultados
+    setTimeout(() => {
+      document
+        .getElementById("catalogo-resultados")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 150);
   }
 
   return (
