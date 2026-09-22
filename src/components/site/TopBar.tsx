@@ -4,7 +4,6 @@ const MESSAGES = [
   "Envíos asegurados a toda Venezuela",
   "Certificado de autenticidad en cada pieza",
   "Asesoría personalizada por WhatsApp",
-  "Apartado disponible con 30% de inicial",
 ];
 
 export function TopBar() {
