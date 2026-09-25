@@ -81,6 +81,29 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+function MetaPageView() {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+
+  useEffect(() => {
+    const sendPageView = () => {
+      const metaWindow = window as typeof window & {
+        fbq?: (command: string, event: string) => void;
+      };
+      metaWindow.fbq?.("track", "PageView");
+    };
+
+    if (typeof window.fbq === "function") {
+      sendPageView();
+      return;
+    }
+
+    window.addEventListener("load", sendPageView, { once: true });
+    return () => window.removeEventListener("load", sendPageView);
+  }, [pathname]);
+
+  return null;
+}
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   loader: () => getCatalog(),
   head: () => ({
@@ -100,7 +123,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     scripts: [
       {
         type: "text/javascript",
-        children: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '2107423647315023');fbq('track', 'PageView');`,
+        children: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '2107423647315023');`,
       },
     ],
     links: [
@@ -176,6 +199,7 @@ function RootComponent() {
               </>
             )}
             <Toaster position="bottom-left" theme="dark" />
+            <MetaPageView />
           </CartProvider>
         </CurrencyProvider>
       </CatalogProvider>
