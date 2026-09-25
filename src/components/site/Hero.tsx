@@ -23,8 +23,9 @@ export function Hero() {
           <span className="block text-gold-gradient">se vuelve eterno</span>
         </h1>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-          Oro 18k, 14k y plata 925 seleccionados pieza por pieza. Catálogo con
-          precios claros, disponibilidad real y atención directa por WhatsApp.
+          Colecciones exclusivas en oro 18k italiano de la más alta calidad y
+          plata ley 925. Encuentra variedad en diseños, precios claros,
+          disponibilidad real y atención inmediata por WhatsApp.
         </p>
 
         <div className="mt-9 flex flex-wrap gap-3">
