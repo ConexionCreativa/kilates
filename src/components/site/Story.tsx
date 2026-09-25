@@ -33,18 +33,20 @@ export function Story() {
         <div>
           <p className="eyebrow">La casa</p>
           <h2 className="mt-3 font-display text-4xl font-light md:text-5xl">
-            Veinte años puliendo confianza
+            Diez años construyendo confianza y elegancia
           </h2>
           <div className="gold-rule mt-5 w-32" />
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-            Kilates nació como un taller familiar en el centro de Caracas y hoy
-            selecciona, restaura y fabrica piezas para clientes en toda
-            Venezuela. Trabajamos solo con oro y plata verificados, con precios
-            transparentes y sin intermediarios.
+            Nacimos con el objetivo de responder a las necesidades de los
+            venezolanos en un espacio seguro y transparente. Con el paso del
+            tiempo, hemos ampliado nuestros servicios para acompañarte en cada
+            etapa: compra, venta, restauración y fabricación de joyas finas en
+            oro y plata ley 925.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            Cada pieza pasa por control de quilataje, pulido final y empaque en
-            estuche de la casa antes de salir a su destino.
+            Nos reinventamos y adaptamos día a día a lo que buscas, garantizando
+            que cada pieza sea rigurosamente verificada antes de llegar a tus
+            manos.
           </p>
 
           <dl className="mt-8 grid grid-cols-3 gap-6 border-t border-border pt-8">
