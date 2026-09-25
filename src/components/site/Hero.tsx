@@ -19,8 +19,8 @@ export function Hero() {
       <div className="mx-auto flex max-w-7xl flex-col justify-center px-4 py-28 md:py-40">
         <p className="eyebrow">Alta joyería · Caracas</p>
         <h1 className="mt-5 max-w-2xl font-display text-5xl leading-[1.05] font-light md:text-7xl">
-          Piezas que se heredan,
-          <span className="block text-gold-gradient">no que se reemplazan</span>
+          Donde el valor
+          <span className="block text-gold-gradient">se vuelve eterno</span>
         </h1>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
           Oro 18k, 14k y plata 925 seleccionados pieza por pieza. Catálogo con
