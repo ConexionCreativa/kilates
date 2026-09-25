@@ -92,7 +92,11 @@ function MetaPageView() {
       metaWindow.fbq?.("track", "PageView");
     };
 
-    if (typeof window.fbq === "function") {
+    const metaWindow = window as typeof window & {
+      fbq?: (command: string, event: string) => void;
+    };
+
+    if (typeof metaWindow.fbq === "function") {
       sendPageView();
       return;
     }
