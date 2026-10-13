@@ -16,6 +16,10 @@ export type Product = {
   isNew?: boolean;
   /** true = precio escrito a mano; false = peso × tasa del metal */
   priceManual?: boolean;
+  /** true = USD y Bs escritos a mano por separado (no dependen de la tasa) */
+  bothManual?: boolean;
+  /** Precio en Bs fijo; solo se usa cuando bothManual es true */
+  priceBs?: number;
 };
 
 export type Category = {
@@ -83,7 +87,7 @@ export const getCatalog = createServerFn({ method: "GET" }).handler(
       supabase
         .from("products")
         .select(
-          "id, name, category, material, weight, detail, description, price, image, in_stock, is_new, price_manual",
+          "id, name, category, material, weight, detail, description, price, image, in_stock, is_new, price_manual, price_bs, price_both_manual",
         )
         .order("sort_order", { ascending: true })
         .limit(2000),
@@ -115,7 +119,8 @@ export const getCatalog = createServerFn({ method: "GET" }).handler(
 
     const products: Product[] = (productsRes.data ?? []).map((p) => {
       const weight = Number(p.weight);
-      const manual = p.price_manual ?? false;
+      const both = p.price_both_manual ?? false;
+      const manual = both || (p.price_manual ?? false);
       const metalRate = p.material.toLowerCase().includes("plata")
         ? settings.silverRate
         : settings.goldRate;
@@ -133,6 +138,8 @@ export const getCatalog = createServerFn({ method: "GET" }).handler(
         inStock: p.in_stock,
         isNew: p.is_new,
         priceManual: manual,
+        bothManual: both,
+        priceBs: Number(p.price_bs ?? 0),
       };
     });
 

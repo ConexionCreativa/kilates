@@ -15,7 +15,20 @@ type CurrencyContextValue = {
   rate: number;
   rateDate: string;
   format: (usd: number) => string;
+  /** Formatea el precio de un producto respetando un precio en Bs fijado a mano. */
+  formatItem: (p: PricedItem, qty?: number) => string;
+  formatLines: (lines: { product: PricedItem; qty: number }[]) => string;
 };
+
+type PricedItem = { price: number; priceBs?: number; bothManual?: boolean };
+
+export function itemBs(p: PricedItem, rate: number) {
+  return p.bothManual && (p.priceBs ?? 0) > 0 ? (p.priceBs as number) : Math.round(p.price * rate);
+}
+
+function fmtBs(bs: number) {
+  return `Bs ${new Intl.NumberFormat("es-VE", { maximumFractionDigits: 0 }).format(Math.round(bs))}`;
+}
 
 const CurrencyContext = createContext<CurrencyContextValue | null>(null);
 
@@ -56,6 +69,12 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
       rateDate: new Date().toLocaleDateString("es-VE"),
       format: (usd: number) =>
         currency === "USD" ? formatUsd(usd) : formatVes(usd, rate),
+      formatItem: (p, qty = 1) =>
+        currency === "USD" ? formatUsd(p.price * qty) : fmtBs(itemBs(p, rate) * qty),
+      formatLines: (lines) =>
+        currency === "USD"
+          ? formatUsd(lines.reduce((s, l) => s + l.product.price * l.qty, 0))
+          : fmtBs(lines.reduce((s, l) => s + itemBs(l.product, rate) * l.qty, 0)),
     }),
     [currency, rate],
   );
