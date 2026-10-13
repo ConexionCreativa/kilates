@@ -12,7 +12,7 @@ import { useSettings, whatsappLink } from "@/lib/catalog";
 import { useCurrency } from "@/lib/currency";
 
 export function CartDrawer() {
-  const { lines, total, isOpen, setOpen, setQty, remove, clear } = useCart();
+  const { lines, isOpen, setOpen, setQty, remove, clear } = useCart();
   const { formatItem, formatLines } = useCurrency();
   const SITE = useSettings();
   const whatsappUrl = (m: string) => whatsappLink(SITE.whatsapp, m);
