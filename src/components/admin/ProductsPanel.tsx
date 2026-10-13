@@ -318,7 +318,7 @@ export function ProductsPanel({
                     setDraft({
                       ...draft,
                       material: metal,
-                      price: manualPrice
+                      price: manualPrice || bothManual
                         ? draft.price
                         : draft.weight * ratePerGram(metal, settings),
                     });
@@ -339,7 +339,7 @@ export function ProductsPanel({
                     setDraft({
                       ...draft,
                       weight,
-                      price: manualPrice
+                      price: manualPrice || bothManual
                         ? draft.price
                         : weight * ratePerGram(metalOf(draft.material), settings),
                     });
