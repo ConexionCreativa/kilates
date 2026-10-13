@@ -189,7 +189,7 @@ export function ProductsPanel({
                     setDraft({
                       ...p,
                       priceBs: p.bothManual
-                        ? p.priceBs
+                        ? (p.priceBs ?? 0)
                         : Math.round(p.price * rate),
                       price: (p.priceManual ?? false)
                         ? p.price
