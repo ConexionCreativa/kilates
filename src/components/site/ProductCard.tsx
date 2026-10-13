@@ -12,7 +12,7 @@ export function ProductCard({
   onOpen: (product: Product) => void;
 }) {
   const { add } = useCart();
-  const { format } = useCurrency();
+  const { formatItem } = useCurrency();
 
   return (
     <article className="group flex flex-col border border-border/70 bg-card transition-colors hover:border-gold/60">
@@ -53,7 +53,7 @@ export function ProductCard({
 
         <div className="mt-4 flex items-end justify-between gap-2 pt-3">
           <span className="font-display text-2xl text-gold">
-            {format(product.price)}
+            {formatItem(product)}
           </span>
           <button
             type="button"

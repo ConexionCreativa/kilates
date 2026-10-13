@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Field, GhostButton, ImageInput, PrimaryButton, inputClass } from "./ui";
+import { itemBs } from "@/lib/currency";
 import type { Category, Product, SiteSettings } from "@/lib/catalog";
 
 const PAGE_SIZE = 20;
@@ -54,6 +55,7 @@ export function ProductsPanel({
   const [draft, setDraft] = useState<Draft | null>(null);
   const [saving, setSaving] = useState(false);
   const [manualPrice, setManualPrice] = useState(false);
+  const [bothManual, setBothManual] = useState(false);
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
@@ -88,7 +90,9 @@ export function ProductsPanel({
       image: draft.image,
       in_stock: draft.inStock,
       is_new: draft.isNew ?? false,
-      price_manual: manualPrice,
+      price_manual: manualPrice || bothManual,
+      price_both_manual: bothManual,
+      price_bs: bothManual ? Math.round(draft.priceBs ?? 0) : 0,
     });
     setSaving(false);
     if (error) {
@@ -145,6 +149,7 @@ export function ProductsPanel({
           className="ml-auto"
           onClick={() => {
             setManualPrice(false);
+            setBothManual(false);
             setDraft(emptyDraft(categories[0]?.id ?? "anillos"));
           }}
         >
@@ -172,7 +177,7 @@ export function ProductsPanel({
                   <p className="truncate text-sm">{p.name}</p>
                   <p className="text-xs text-muted-foreground">
                     {p.category} · US$ {p.price.toFixed(2)} · Bs{" "}
-                    {Math.round(p.price * rate).toLocaleString("es-VE")}
+                    {itemBs(p, rate).toLocaleString("es-VE")}
                     {!p.inStock && " · agotado"}
                   </p>
                 </div>
@@ -180,8 +185,12 @@ export function ProductsPanel({
                   onClick={(e) => {
                     e.stopPropagation();
                     setManualPrice(p.priceManual ?? false);
+                    setBothManual(p.bothManual ?? false);
                     setDraft({
                       ...p,
+                      priceBs: p.bothManual
+                        ? (p.priceBs ?? 0)
+                        : Math.round(p.price * rate),
                       price: (p.priceManual ?? false)
                         ? p.price
                         : p.weight * ratePerGram(metal, settings),
@@ -223,7 +232,7 @@ export function ProductsPanel({
                     </p>
                     <p>
                       <span className="text-muted-foreground">Precio Bs:</span>{" "}
-                      Bs {Math.round(p.price * rate).toLocaleString("es-VE")}
+                      Bs {itemBs(p, rate).toLocaleString("es-VE")}
                     </p>
                     <p>
                       <span className="text-muted-foreground">Disponible:</span>{" "}
@@ -309,7 +318,7 @@ export function ProductsPanel({
                     setDraft({
                       ...draft,
                       material: metal,
-                      price: manualPrice
+                      price: manualPrice || bothManual
                         ? draft.price
                         : draft.weight * ratePerGram(metal, settings),
                     });
@@ -330,7 +339,7 @@ export function ProductsPanel({
                     setDraft({
                       ...draft,
                       weight,
-                      price: manualPrice
+                      price: manualPrice || bothManual
                         ? draft.price
                         : weight * ratePerGram(metalOf(draft.material), settings),
                     });
@@ -342,21 +351,24 @@ export function ProductsPanel({
                 <input
                   type="number"
                   step="0.01"
-                  readOnly={!manualPrice}
+                  readOnly={!manualPrice && !bothManual}
                   value={Number(draft.price.toFixed(2))}
                   onChange={(e) =>
                     setDraft({ ...draft, price: Number(e.target.value) })
                   }
-                  className={`${inputClass} ${manualPrice ? "" : "opacity-70"}`}
+                  className={`${inputClass} ${manualPrice || bothManual ? "" : "opacity-70"}`}
                 />
               </Field>
               <Field label="Precio en bolívares">
                 <input
                   type="number"
                   step="1"
-                  readOnly
-                  value={Math.round(draft.price * rate)}
-                  className={`${inputClass} opacity-70`}
+                  readOnly={!bothManual}
+                  value={bothManual ? (draft.priceBs ?? 0) : Math.round(draft.price * rate)}
+                  onChange={(e) =>
+                    setDraft({ ...draft, priceBs: Number(e.target.value) })
+                  }
+                  className={`${inputClass} ${bothManual ? "" : "opacity-70"}`}
                 />
               </Field>
               <div className="md:col-span-2 -mt-2 text-xs text-muted-foreground">
@@ -380,6 +392,27 @@ export function ProductsPanel({
                     }}
                   />
                   Fijar precio manualmente
+                </label>
+                <label className="mt-2 flex items-center gap-2 uppercase">
+                  <input
+                    type="checkbox"
+                    checked={bothManual}
+                    onChange={(e) => {
+                      const on = e.target.checked;
+                      setBothManual(on);
+                      if (on) {
+                        setDraft({ ...draft, priceBs: Math.round(draft.price * rate) });
+                      } else if (!manualPrice) {
+                        setDraft({
+                          ...draft,
+                          price:
+                            draft.weight *
+                            ratePerGram(metalOf(draft.material), settings),
+                        });
+                      }
+                    }}
+                  />
+                  Personalizar ambos precios manualmente (USD y Bs)
                 </label>
               </div>
               <Field label="Detalle corto">

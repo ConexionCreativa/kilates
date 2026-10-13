@@ -10,7 +10,7 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "14.5"
+    PostgrestVersion: "14.17"
   }
   public: {
     Tables: {
@@ -54,6 +54,8 @@ export type Database = {
           material: string
           name: string
           price: number
+          price_both_manual: boolean
+          price_bs: number
           price_manual: boolean
           sort_order: number
           updated_at: string
@@ -71,6 +73,8 @@ export type Database = {
           material?: string
           name: string
           price?: number
+          price_both_manual?: boolean
+          price_bs?: number
           price_manual?: boolean
           sort_order?: number
           updated_at?: string
@@ -88,6 +92,8 @@ export type Database = {
           material?: string
           name?: string
           price?: number
+          price_both_manual?: boolean
+          price_bs?: number
           price_manual?: boolean
           sort_order?: number
           updated_at?: string
@@ -102,6 +108,60 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      products_backup_20261013: {
+        Row: {
+          category: string | null
+          created_at: string | null
+          description: string | null
+          detail: string | null
+          id: string | null
+          image: string | null
+          in_stock: boolean | null
+          is_new: boolean | null
+          material: string | null
+          name: string | null
+          price: number | null
+          price_manual: boolean | null
+          sort_order: number | null
+          updated_at: string | null
+          weight: number | null
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string | null
+          description?: string | null
+          detail?: string | null
+          id?: string | null
+          image?: string | null
+          in_stock?: boolean | null
+          is_new?: boolean | null
+          material?: string | null
+          name?: string | null
+          price?: number | null
+          price_manual?: boolean | null
+          sort_order?: number | null
+          updated_at?: string | null
+          weight?: number | null
+        }
+        Update: {
+          category?: string | null
+          created_at?: string | null
+          description?: string | null
+          detail?: string | null
+          id?: string | null
+          image?: string | null
+          in_stock?: boolean | null
+          is_new?: boolean | null
+          material?: string | null
+          name?: string | null
+          price?: number | null
+          price_manual?: boolean | null
+          sort_order?: number | null
+          updated_at?: string | null
+          weight?: number | null
+        }
+        Relationships: []
       }
       site_settings: {
         Row: {
@@ -154,6 +214,60 @@ export type Database = {
           usd_rate?: number
           whatsapp?: string
           whatsapp_display?: string
+        }
+        Relationships: []
+      }
+      site_settings_backup_20261013: {
+        Row: {
+          address: string | null
+          eur_rate: number | null
+          gold_rate: number | null
+          hours: string | null
+          id: number | null
+          instagram: string | null
+          name: string | null
+          phone: string | null
+          rates_updated_at: string | null
+          silver_rate: number | null
+          tagline: string | null
+          updated_at: string | null
+          usd_rate: number | null
+          whatsapp: string | null
+          whatsapp_display: string | null
+        }
+        Insert: {
+          address?: string | null
+          eur_rate?: number | null
+          gold_rate?: number | null
+          hours?: string | null
+          id?: number | null
+          instagram?: string | null
+          name?: string | null
+          phone?: string | null
+          rates_updated_at?: string | null
+          silver_rate?: number | null
+          tagline?: string | null
+          updated_at?: string | null
+          usd_rate?: number | null
+          whatsapp?: string | null
+          whatsapp_display?: string | null
+        }
+        Update: {
+          address?: string | null
+          eur_rate?: number | null
+          gold_rate?: number | null
+          hours?: string | null
+          id?: number | null
+          instagram?: string | null
+          name?: string | null
+          phone?: string | null
+          rates_updated_at?: string | null
+          silver_rate?: number | null
+          tagline?: string | null
+          updated_at?: string | null
+          usd_rate?: number | null
+          whatsapp?: string | null
+          whatsapp_display?: string | null
         }
         Relationships: []
       }

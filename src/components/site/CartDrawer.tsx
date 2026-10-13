@@ -12,8 +12,8 @@ import { useSettings, whatsappLink } from "@/lib/catalog";
 import { useCurrency } from "@/lib/currency";
 
 export function CartDrawer() {
-  const { lines, total, isOpen, setOpen, setQty, remove, clear } = useCart();
-  const { format } = useCurrency();
+  const { lines, isOpen, setOpen, setQty, remove, clear } = useCart();
+  const { formatItem, formatLines } = useCurrency();
   const SITE = useSettings();
   const whatsappUrl = (m: string) => whatsappLink(SITE.whatsapp, m);
 
@@ -22,12 +22,10 @@ export function CartDrawer() {
     "",
     ...lines.map(
       (l) =>
-        `• ${l.product.name} (${l.product.material}) x${l.qty} — ${format(
-          l.product.price * l.qty,
-        )}`,
+        `• ${l.product.name} (${l.product.material}) x${l.qty} — ${formatItem(l.product, l.qty)}`,
     ),
     "",
-    `Total estimado: ${format(total)}`,
+    `Total estimado: ${formatLines(lines)}`,
     "",
     "✨ Me interesa también conocer la oferta con descuento para pago en Efectivo, Zelle o USDT. ¿Me ayudan a formalizar la compra?",
   ].join("\n");
@@ -97,7 +95,7 @@ export function CartDrawer() {
                         <Trash2 className="size-4" />
                       </button>
                       <span className="ml-auto text-sm text-gold">
-                        {format(product.price * qty)}
+                        {formatItem(product, qty)}
                       </span>
                     </div>
                   </div>
@@ -111,7 +109,7 @@ export function CartDrawer() {
           <div className="flex items-baseline justify-between">
             <span className="eyebrow">Total estimado</span>
             <span className="font-display text-2xl text-gold">
-              {format(total)}
+              {formatLines(lines)}
             </span>
           </div>
           <Button

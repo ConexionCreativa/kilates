@@ -24,7 +24,7 @@ export function ProductDialog({
   const { add } = useCart();
   const SITE = useSettings();
   const whatsappUrl = (m: string) => whatsappLink(SITE.whatsapp, m);
-  const { format } = useCurrency();
+  const { formatItem } = useCurrency();
   const [qty, setQty] = useState(1);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export function ProductDialog({
               </dl>
 
               <p className="mt-6 font-display text-4xl text-gold">
-                {format(product.price * qty)}
+                {formatItem(product, qty)}
               </p>
 
               <div className="mt-4 flex items-center gap-3">
