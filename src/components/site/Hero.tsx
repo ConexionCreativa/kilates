@@ -1,10 +1,8 @@
 import { MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero-joyeria.jpg";
-import { useSettings, whatsappLink } from "@/lib/catalog";
+import { WHATSAPP_LINK } from "@/lib/catalog";
 
 export function Hero() {
-  const SITE = useSettings();
-  const whatsappUrl = (m: string) => whatsappLink(SITE.whatsapp, m);
   return (
     <section className="relative isolate overflow-hidden">
       <img
@@ -36,7 +34,7 @@ export function Hero() {
             Ver colección
           </a>
           <a
-            href={whatsappUrl("Hola Kilates, quisiera asesoría para elegir una pieza.")}
+            href={WHATSAPP_LINK}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 border border-gold/50 px-8 py-3 text-[11px] tracking-[0.22em] text-gold uppercase transition-colors hover:bg-gold hover:text-primary-foreground"

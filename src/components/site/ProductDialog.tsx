@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import type { Product } from "@/data/products";
-import { useSettings, whatsappLink } from "@/lib/catalog";
+import { WHATSAPP_LINK } from "@/lib/catalog";
 import { useCurrency } from "@/lib/currency";
 import { useCart } from "@/lib/cart";
 
@@ -23,7 +23,6 @@ export function ProductDialog({
 }) {
   const { add } = useCart();
   const SITE = useSettings();
-  const whatsappUrl = (m: string) => whatsappLink(SITE.whatsapp, m);
   const { formatItem } = useCurrency();
   const [qty, setQty] = useState(1);
 
@@ -119,9 +118,7 @@ export function ProductDialog({
               </div>
 
               <a
-                href={whatsappUrl(
-                  `Hola Kilates, me interesa la pieza "${product.name}" (${product.material}). ¿Podrían darme más información?`,
-                )}
+                href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-3 inline-flex items-center justify-center gap-2 border border-gold/50 px-4 py-2 text-[11px] tracking-[0.18em] text-gold uppercase transition-colors hover:bg-gold hover:text-primary-foreground"
