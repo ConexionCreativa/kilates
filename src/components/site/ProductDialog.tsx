@@ -22,7 +22,6 @@ export function ProductDialog({
   onOpenChange: (open: boolean) => void;
 }) {
   const { add } = useCart();
-  const SITE = useSettings();
   const { formatItem } = useCurrency();
   const [qty, setQty] = useState(1);
 
