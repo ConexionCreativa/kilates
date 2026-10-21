@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
 import atelier from "@/assets/atelier.jpg";
-import { useSettings, whatsappLink } from "@/lib/catalog";
+import { useSettings, WHATSAPP_LINK } from "@/lib/catalog";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
@@ -25,7 +25,6 @@ export const Route = createFileRoute("/contacto")({
 
 function Contacto() {
   const SITE = useSettings();
-  const whatsappUrl = (m: string) => whatsappLink(SITE.whatsapp, m);
 
   return (
     <>
@@ -58,9 +57,7 @@ function Contacto() {
           </ul>
 
           <a
-            href={whatsappUrl(
-              "Hola Kilates, quisiera coordinar una visita al showroom.",
-            )}
+            href={WHATSAPP_LINK}
             target="_blank"
             rel="noreferrer"
             className="mt-10 inline-flex items-center gap-2 border border-gold bg-gold px-8 py-3 text-[11px] tracking-[0.22em] text-primary-foreground uppercase transition-colors hover:bg-gold-light"

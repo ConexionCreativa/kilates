@@ -8,14 +8,14 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/lib/cart";
-import { useSettings, whatsappLink } from "@/lib/catalog";
+import { useSettings, whatsappOrderLink } from "@/lib/catalog";
 import { useCurrency } from "@/lib/currency";
 
 export function CartDrawer() {
   const { lines, isOpen, setOpen, setQty, remove, clear } = useCart();
   const { formatItem, formatLines } = useCurrency();
   const SITE = useSettings();
-  const whatsappUrl = (m: string) => whatsappLink(SITE.whatsapp, m);
+  const whatsappUrl = (m: string) => whatsappOrderLink(m);
 
   const message = [
     `Hola ${SITE.name}, quiero solicitar estas piezas:`,

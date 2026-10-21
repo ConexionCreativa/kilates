@@ -62,6 +62,13 @@ export function useSettings() {
   return useCatalog().settings;
 }
 
-export function whatsappLink(phone: string, message: string) {
-  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+/** Enlace corto oficial de WhatsApp de Kilates Joyería. */
+export const WHATSAPP_LINK = "https://wa.link/kilates-joyerias";
+
+/** Número al que redirige el enlace corto (pedidos). */
+export const WHATSAPP_PHONE = "584220476345";
+
+/** Enlace de pedido: conserva el detalle de las piezas en el mensaje. */
+export function whatsappOrderLink(message: string) {
+  return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
 }
